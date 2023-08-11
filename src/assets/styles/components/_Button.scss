@@ -1,0 +1,14 @@
+@use '../abstracts/colors' as colors;
+
+.button {
+  background-color: colors.$secondary;
+  color: colors.$forth;
+  border-radius: 5px;
+  padding: 10px 20px 10px 20px;
+  gap: 10px;
+
+  &:hover {
+    background-color: colors.$primary;
+    cursor: pointer;
+  }
+}

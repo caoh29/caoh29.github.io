@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider, } from "react-router-dom";
-import './index.css';
-// import App from './App';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import './assets/styles/style.scss';
 import reportWebVitals from './reportWebVitals';
 import HomePage from './pages/Home/HomePage';
 import InnerPage from './pages/Inner/InnerPage';
@@ -10,12 +9,12 @@ import ErrorPage from './pages/Error/ErrorPage';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <HomePage />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/inner",
+    path: '/inner',
     element: <InnerPage />,
     errorElement: <ErrorPage />,
   },
