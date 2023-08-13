@@ -1,9 +1,4 @@
-interface PhotoBoxProps {
-  name: string;
-  title: string;
-  description: string;
-  avatar: string;
-}
+import { PhotoBoxProps } from '../../types';
 
 export default function PhotoBox({
   name,

@@ -1,10 +1,4 @@
-import { ReactNode } from 'react';
-
-interface ButtonProps {
-  text: string;
-  icon?: ReactNode;
-  onClick?: () => void;
-}
+import { ButtonProps } from '../../types';
 
 export default function Button({ text, icon, onClick }: ButtonProps) {
   return (

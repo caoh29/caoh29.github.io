@@ -2,17 +2,11 @@ import { useNavigate } from 'react-router-dom';
 
 import Button from '../../components/Button';
 import PhotoBox from '../../components/PhotoBox';
-import avatarImage from '../../assets/images/avatar.jpg';
 
-const PHOTO_BOX_PROPS = {
-  name: 'Camilo Ordonez',
-  title: 'Mechanical Engineer and Frontend developer',
-  description:
-    'I am a software engineer with a passion for building things. I enjoy solving problems, with and without code',
-  avatar: avatarImage,
-};
+import { PHOTO_BOX_PROPS } from '../../utils/constants';
+import { ButtonProps } from '../../types';
 
-const BUTTON_PROPS = {
+const BUTTON_PROPS: ButtonProps = {
   text: 'Know more',
 };
 
