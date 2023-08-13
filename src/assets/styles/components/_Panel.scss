@@ -1,0 +1,11 @@
+@use '../abstracts/colors' as colors;
+
+.panel {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-color: colors.$secondary;
+  padding: 20px;
+  width: 250px;
+}
