@@ -7,55 +7,66 @@
   align-items: center;
   justify-content: center;
 
-  .photo-box {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-
-    .crop-photo {
-      margin: auto;
-      width: 100px;
-      height: 100px;
-      overflow: hidden;
-      border-radius: 50%;
-      border-style: solid;
-      border-color: colors.$forth;
-      border-width: 1px;
-    
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-    
-    .name-photo {
-      color: colors.$forth;
-      font-size: 16px;
-      font-weight: variables.$titleWeight;
-      line-height: 20px;
-      text-align: center;
-    }
-  
-    .title-photo {
-      display: none;
-      // margin: 10px auto 10px auto;
-      // font-size: 25px;
-      // font-weight: variables.$subtitleWeight;
-      // line-height: 30px;
-    }
-  
-    .description-photo {
-      display: none;
-      // font-size: 14px;
-      // font-weight: variables.$regularTextWeight;
-      // line-height: 21px;
-    }
+  .button {
+    position: sticky;
+    width: 30px;
+    height: 30px;
+    padding: 0;
   }
 
-  .button {
-    margin: 75px auto auto auto;
+  .panel {
+    .photo-box {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+  
+      .crop-photo {
+        margin: auto;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        border-radius: 50%;
+        border-style: solid;
+        border-color: colors.$forth;
+        border-width: 1px;
+      
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      
+      .name-photo {
+        color: colors.$forth;
+        font-size: 16px;
+        font-weight: variables.$titleWeight;
+        line-height: 20px;
+        text-align: center;
+      }
+    
+      .title-photo {
+        display: none;
+        // margin: 10px auto 10px auto;
+        // font-size: 25px;
+        // font-weight: variables.$subtitleWeight;
+        // line-height: 30px;
+      }
+    
+      .description-photo {
+        display: none;
+        // font-size: 14px;
+        // font-weight: variables.$regularTextWeight;
+        // line-height: 21px;
+      }
+    }
+  
+    .button {
+      margin: 75px auto auto auto;
+      width: auto;
+      height: auto;
+    }
   }
 }
 
@@ -68,13 +79,15 @@
       width: 54px;
       padding: 20px 7px;
 
-      .crop-photo {
-        width: 40px;
-        height: 40px;
-      }
-
-      .name-photo {
-        display: none;
+      .photo-box {
+        .crop-photo {
+          width: 40px;
+          height: 40px;
+        }
+  
+        .name-photo {
+          display: none;
+        }
       }
       .navigation-link-container {
         justify-content: center;
