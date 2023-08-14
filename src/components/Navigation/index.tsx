@@ -8,13 +8,13 @@ export default function Navigation() {
   return (
     <div className="navigation">
       {NAVIGATION_DIRECTORY.map((item) => (
-        <div className="navigation-link-container" key={item.link}>
+        <div className="navigation-link__container" key={item.link}>
           <NavLink className="navigation-link" to={item.link}>
             <FontAwesomeIcon
-              className="navigation-link-icon"
+              className="navigation-link__icon"
               icon={item.icon}
             />
-            <span className="navigation-link-text">{item.content}</span>
+            <span className="navigation-link__text">{item.content}</span>
           </NavLink>
         </div>
       ))}

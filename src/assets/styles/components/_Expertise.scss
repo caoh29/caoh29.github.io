@@ -1,0 +1,26 @@
+@use '../abstracts/colors';
+
+.expertise-list {
+  list-style-type: disc;
+  padding-inline-start: 40px;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+
+    .expertise-list-date {
+      width: 160px;
+      margin: 20px 20px 0 0;
+
+      .date {
+        color: colors.$ternary;
+        font-size: 16px;
+      }
+    }
+
+    .info {
+      background-color: colors.$white;
+    }
+  }
+}

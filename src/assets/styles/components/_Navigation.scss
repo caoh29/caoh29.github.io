@@ -1,4 +1,4 @@
-@use '../abstracts/colors' as colors;
+@use '../abstracts/colors';
 
 .navigation {
   display: flex;
@@ -6,7 +6,7 @@
   flex-wrap: nowrap;
   margin-top: 40px;
 
-  .navigation-link-container {
+  .navigation-link__container {
     display: flex;
     flex-wrap: nowrap;
     padding: 18px 20px 18px 20px;
@@ -15,12 +15,12 @@
   .navigation-link {
     color: colors.$ternary;
     
-    .navigation-link-icon {
+    .navigation-link__icon {
       width: 14px;
       height: 14px;
     }
 
-    .navigation-link-text {
+    .navigation-link__text {
       margin-left: 20px;
     }
   }

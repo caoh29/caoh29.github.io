@@ -4,11 +4,11 @@
 .inner {
   display: grid;
   grid-template-columns: 250px 30px auto;
-  align-items: center;
   justify-content: center;
 
-  .button {
+  & > .button {
     position: sticky;
+    top: 30px;
     width: 30px;
     height: 30px;
     padding: 0;
@@ -48,24 +48,18 @@
     
       .title-photo {
         display: none;
-        // margin: 10px auto 10px auto;
-        // font-size: 25px;
-        // font-weight: variables.$subtitleWeight;
-        // line-height: 30px;
       }
     
       .description-photo {
         display: none;
-        // font-size: 14px;
-        // font-weight: variables.$regularTextWeight;
-        // line-height: 21px;
       }
     }
   
     .button {
       margin: 75px auto auto auto;
-      width: auto;
-      height: auto;
+      width: 105px;
+      height: 36px;
+      padding: 10px 20px 10px 20px;
     }
   }
 }
@@ -89,10 +83,10 @@
           display: none;
         }
       }
-      .navigation-link-container {
+      .navigation-link__container {
         justify-content: center;
 
-        .navigation-link-text {
+        .navigation-link__text {
           display: none;
         }
       }

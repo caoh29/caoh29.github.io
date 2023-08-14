@@ -1,10 +1,11 @@
 import { useNavigate } from 'react-router-dom';
 
+import { PHOTO_BOX_PROPS } from '../../utils/constants';
+
+import { ButtonProps } from '../../types';
+
 import Button from '../../components/Button';
 import PhotoBox from '../../components/PhotoBox';
-
-import { PHOTO_BOX_PROPS } from '../../utils/constants';
-import { ButtonProps } from '../../types';
 
 const BUTTON_PROPS: ButtonProps = {
   text: 'Know more',
