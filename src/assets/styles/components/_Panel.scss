@@ -1,26 +1,12 @@
 @use '../abstracts/colors';
 
 .panel {
+  position: sticky;
+  top: 0;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   background-color: colors.$secondary;
-  padding: 20px;
-  width: 250px;
-  height: 100%;
-
-  .photo-box {
-    position: sticky;
-    top: 20px;
-  }
-
-  .navigation {
-    position: sticky;
-    top: 195px;
-  }
-
-  .button {
-    position: sticky;
-    top: 670px;
-  }
+  padding: 20px 0;
+  height: 100vh;
 }

@@ -6,9 +6,9 @@ import { NAVIGATION_DIRECTORY } from '../../utils/constants';
 
 export default function Navigation() {
   return (
-    <div className="navigation">
+    <ul className="navigation">
       {NAVIGATION_DIRECTORY.map((item) => (
-        <div className="navigation-link__container" key={item.link}>
+        <li className="navigation-link__container" key={item.link}>
           <NavLink className="navigation-link" to={item.link}>
             <FontAwesomeIcon
               className="navigation-link__icon"
@@ -16,8 +16,8 @@ export default function Navigation() {
             />
             <span className="navigation-link__text">{item.content}</span>
           </NavLink>
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }

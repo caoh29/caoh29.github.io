@@ -33,10 +33,10 @@ const BUTTON_PROPS: ButtonProps = {
 export default function InnerPage() {
   const [isOpen, setIsOpen] = useState(true);
   return (
-    <div className="inner">
+    <main className="inner">
       {isOpen && <Panel />}
       <Button icon={BUTTON_PROPS.icon} onClick={() => setIsOpen(!isOpen)} />
-      <div style={{ marginRight: '36px' }}>
+      <div style={{ marginRight: '20px' }}>
         <Box title={ABOUT_BOX_PROPS.title} content={ABOUT_BOX_PROPS.content} />
         <Box title={TIMELINE_BOX_PROPS.title}>
           <TimeLine data={TIMELINE_PROPS.data} />
@@ -54,6 +54,6 @@ export default function InnerPage() {
           <Feedback data={FEEDBACK_PROPS.data} />
         </Box>
       </div>
-    </div>
+    </main>
   );
 }

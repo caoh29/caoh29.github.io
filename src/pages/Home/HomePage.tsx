@@ -14,7 +14,7 @@ const BUTTON_PROPS: ButtonProps = {
 export default function HomePage() {
   const navigate = useNavigate();
   return (
-    <div className="home">
+    <main className="home">
       <PhotoBox
         name={PHOTO_BOX_PROPS.name}
         title={PHOTO_BOX_PROPS.title}
@@ -22,6 +22,6 @@ export default function HomePage() {
         avatar={PHOTO_BOX_PROPS.avatar}
       />
       <Button text={BUTTON_PROPS.text} onClick={() => navigate('/inner')} />
-    </div>
+    </main>
   );
 }
