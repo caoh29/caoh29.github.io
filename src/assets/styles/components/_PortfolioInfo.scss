@@ -1,0 +1,21 @@
+@use '../abstracts/colors';
+@use '../abstracts/variables';
+
+.portfolio-info {
+  padding: 15px;
+
+  h2 {
+    margin-bottom: 10px;
+    font-weight: variables.$titleWeight;
+    font-size: 18px;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  a {
+    text-decoration: underline;
+    color: colors.$primary;
+  }
+}

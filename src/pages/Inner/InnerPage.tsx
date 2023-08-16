@@ -7,8 +7,12 @@ import {
   ABOUT_BOX_PROPS,
   TIMELINE_BOX_PROPS,
   EXPERTISE_BOX_PROPS,
+  PORTFOLIO_BOX_PROPS,
   TIMELINE_PROPS,
   EXPERTISE_PROPS,
+  ADDRESS_BOX_PROPS,
+  FEEDBACK_BOX_PROPS,
+  FEEDBACK_PROPS,
 } from '../../utils/constants';
 
 import { ButtonProps } from '../../types';
@@ -18,6 +22,9 @@ import Panel from '../../components/Panel';
 import Box from '../../components/Box';
 import TimeLine from '../../components/Timeline';
 import Expertise from '../../components/Expertise';
+import Portfolio from '../../components/Portfolio';
+import Address from '../../components/Address';
+import Feedback from '../../components/Feedback';
 
 const BUTTON_PROPS: ButtonProps = {
   icon: <FontAwesomeIcon icon={faBars} />,
@@ -36,6 +43,15 @@ export default function InnerPage() {
         </Box>
         <Box title={EXPERTISE_BOX_PROPS.title}>
           <Expertise data={EXPERTISE_PROPS.data} />
+        </Box>
+        <Box title={PORTFOLIO_BOX_PROPS.title}>
+          <Portfolio />
+        </Box>
+        <Box title={ADDRESS_BOX_PROPS.title}>
+          <Address />
+        </Box>
+        <Box title={FEEDBACK_BOX_PROPS.title}>
+          <Feedback data={FEEDBACK_PROPS.data} />
         </Box>
       </div>
     </div>

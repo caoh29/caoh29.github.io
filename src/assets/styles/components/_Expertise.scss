@@ -1,9 +1,6 @@
 @use '../abstracts/colors';
 
 .expertise-list {
-  list-style-type: disc;
-  padding-inline-start: 40px;
-
   li {
     display: flex;
     align-items: flex-start;

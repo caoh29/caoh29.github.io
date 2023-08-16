@@ -1,9 +1,11 @@
-import { faUser, faGraduationCap, faPen, faGem, faSuitcase, faLocationArrow, faComment } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faGraduationCap, faPen, faGem, faSuitcase, faLocationArrow, faComment, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faXTwitter, faFacebookF, faSkype } from '@fortawesome/free-brands-svg-icons';
 
 import avatarImage from '../../assets/images/avatar.jpg';
 
-import { PhotoBoxProps, BoxProps, TimeLineProps, ExpertiseProps } from '../../types';
+import { PhotoBoxProps, BoxProps, TimeLineProps, ExpertiseProps, FeedbackProps } from '../../types';
 
+// PHOTO BOX
 export const PHOTO_BOX_PROPS: PhotoBoxProps = {
   name: 'Camilo Ordonez',
   title: 'Mechanical Engineer and Frontend developer',
@@ -12,12 +14,14 @@ export const PHOTO_BOX_PROPS: PhotoBoxProps = {
   avatar: avatarImage,
 };
 
+//  ABOUT
 export const ABOUT_BOX_PROPS: BoxProps = {
   title: 'About me',
   content:
     'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque',
 };
 
+// TIMELINE
 export const TIMELINE_BOX_PROPS: BoxProps = {
   title: 'Education',
 };
@@ -42,6 +46,7 @@ export const TIMELINE_PROPS: TimeLineProps = {
   ]
 };
 
+// EXPERIENCE
 export const EXPERTISE_BOX_PROPS: BoxProps = {
   title: 'Experience',
 };
@@ -67,6 +72,75 @@ export const EXPERTISE_PROPS: ExpertiseProps = {
   ]
 };
 
+// PORTFOLIO
+export const PORTFOLIO_BOX_PROPS: BoxProps = {
+  title: 'Portfolio',
+};
+
+// CONTACT
+export const ADDRESS_BOX_PROPS: BoxProps = {
+  title: 'Contacts',
+};
+
+export const ADDRESS_LINES = [
+  {
+    title: '',
+    href: 'tel:+57 316 578 6800',
+    content: '+57 316 578 6800',
+    icon: faPhone,
+  },
+  {
+    title: '',
+    href: 'mailto:cronox20@gmail.com',
+    content: 'cronox20@gmail.com',
+    icon: faEnvelope,
+  },
+  {
+    title: 'Twitter',
+    href: 'https://twitter.com/92iMAHC',
+    content: 'https://twitter.com/92iMAHC',
+    icon: faXTwitter,
+  },
+  {
+    title: 'Facebook',
+    href: 'https://www.facebook.com/camilo.ordonez.39/',
+    content: 'https://www.facebook.com/camilo.ordonez.39/',
+    icon: faFacebookF,
+  },
+  {
+    title: 'Skype',
+    href: 'https://join.skype.com/invite/k5bvFMtwY2mA',
+    content: 'cronox20',
+    icon: faSkype,
+  },
+];
+
+// FEEDBACK
+export const FEEDBACK_BOX_PROPS: BoxProps = {
+  title: 'Feedbacks',
+};
+
+export const FEEDBACK_PROPS: FeedbackProps = {
+  data: [
+    {
+      feedback: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor',
+      reporter: {
+        photoUrl: 'https://www.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg',
+        name: 'John Doe',
+        citeUrl: 'https://www.citeexample.com/1'
+      }
+    },
+    {
+      feedback: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor',
+      reporter: {
+        photoUrl: 'https://www.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg',
+        name: 'Travis McNell',
+        citeUrl: 'https://www.citeexample.com/2'
+      }
+    },
+  ]
+}
+// NAVIGATION
 export const NAVIGATION_DIRECTORY = [
   {
     icon: faUser,

@@ -42,3 +42,20 @@ export interface ExpertiseProps {
     };
   }[];
 }
+
+export interface PortfolioInfoProps {
+  title: string;
+  text: string;
+  url: string;
+}
+
+export interface FeedbackProps {
+  data: {
+    feedback: string;
+    reporter: {
+      photoUrl: string;
+      name: string;
+      citeUrl: string;
+    };
+  }[];
+}
