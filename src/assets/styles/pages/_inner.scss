@@ -4,6 +4,10 @@
 .inner {
   display: flex;
 
+  .content {
+    margin-right: 20px;
+  }
+
   & > .button {
     position: sticky;
     top: 30px;

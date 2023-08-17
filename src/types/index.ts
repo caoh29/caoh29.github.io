@@ -16,6 +16,7 @@ export interface PhotoBoxProps {
 export interface BoxProps {
   title: string;
   content?: string;
+  id: string;
   children?: ReactNode;
 }
 

@@ -36,21 +36,25 @@ export default function InnerPage() {
     <main className="inner">
       {isOpen && <Panel />}
       <Button icon={BUTTON_PROPS.icon} onClick={() => setIsOpen(!isOpen)} />
-      <div style={{ marginRight: '20px' }}>
-        <Box title={ABOUT_BOX_PROPS.title} content={ABOUT_BOX_PROPS.content} />
-        <Box title={TIMELINE_BOX_PROPS.title}>
+      <div className="content">
+        <Box
+          title={ABOUT_BOX_PROPS.title}
+          content={ABOUT_BOX_PROPS.content}
+          id={ABOUT_BOX_PROPS.id}
+        />
+        <Box title={TIMELINE_BOX_PROPS.title} id={TIMELINE_BOX_PROPS.id}>
           <TimeLine data={TIMELINE_PROPS.data} />
         </Box>
-        <Box title={EXPERTISE_BOX_PROPS.title}>
+        <Box title={EXPERTISE_BOX_PROPS.title} id={EXPERTISE_BOX_PROPS.id}>
           <Expertise data={EXPERTISE_PROPS.data} />
         </Box>
-        <Box title={PORTFOLIO_BOX_PROPS.title}>
+        <Box title={PORTFOLIO_BOX_PROPS.title} id={PORTFOLIO_BOX_PROPS.id}>
           <Portfolio />
         </Box>
-        <Box title={ADDRESS_BOX_PROPS.title}>
+        <Box title={ADDRESS_BOX_PROPS.title} id={ADDRESS_BOX_PROPS.id}>
           <Address />
         </Box>
-        <Box title={FEEDBACK_BOX_PROPS.title}>
+        <Box title={FEEDBACK_BOX_PROPS.title} id={FEEDBACK_BOX_PROPS.id}>
           <Feedback data={FEEDBACK_PROPS.data} />
         </Box>
       </div>

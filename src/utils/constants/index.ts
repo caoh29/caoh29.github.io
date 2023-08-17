@@ -2,6 +2,8 @@ import { faUser, faGraduationCap, faPen, faGem, faSuitcase, faLocationArrow, faC
 import { faXTwitter, faFacebookF, faSkype } from '@fortawesome/free-brands-svg-icons';
 
 import avatarImage from '../../assets/images/avatar.jpg';
+import ladder from '../../assets/images/ladder.png';
+import loupe from '../../assets/images/loupe.png';
 
 import { PhotoBoxProps, BoxProps, TimeLineProps, ExpertiseProps, FeedbackProps } from '../../types';
 
@@ -17,6 +19,7 @@ export const PHOTO_BOX_PROPS: PhotoBoxProps = {
 //  ABOUT
 export const ABOUT_BOX_PROPS: BoxProps = {
   title: 'About me',
+  id: 'about',
   content:
     'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque',
 };
@@ -24,6 +27,7 @@ export const ABOUT_BOX_PROPS: BoxProps = {
 // TIMELINE
 export const TIMELINE_BOX_PROPS: BoxProps = {
   title: 'Education',
+  id: 'education',
 };
 
 export const TIMELINE_PROPS: TimeLineProps = {
@@ -49,6 +53,7 @@ export const TIMELINE_PROPS: TimeLineProps = {
 // EXPERIENCE
 export const EXPERTISE_BOX_PROPS: BoxProps = {
   title: 'Experience',
+  id: 'experience',
 };
 
 export const EXPERTISE_PROPS: ExpertiseProps = {
@@ -75,11 +80,59 @@ export const EXPERTISE_PROPS: ExpertiseProps = {
 // PORTFOLIO
 export const PORTFOLIO_BOX_PROPS: BoxProps = {
   title: 'Portfolio',
+  id: 'portfolio'
 };
+
+export const PORTFOLIO_CATEGORIES = [
+  {
+    value: 'All',
+    selector: '*'
+  },
+  {
+    value: 'UI',
+    selector: '.ui'
+  },
+  {
+    value: 'Code',
+    selector: '.code'
+  },
+];
+
+export const PORTFOLIO_PROJECTS = [
+  {
+    className: 'ui',
+    name: 'First project',
+    description: 'some text',
+    image: loupe,
+    projectUrl: 'https://caoh29.github.io/'
+  },
+  {
+    className: 'ui code',
+    name: 'Second project',
+    description: 'some text',
+    image: loupe,
+    projectUrl: 'https://caoh29.github.io/'
+  },
+  {
+    className: 'code',
+    name: 'Third project',
+    description: 'some text',
+    image: ladder,
+    projectUrl: 'https://caoh29.github.io/'
+  },
+  {
+    className: 'code',
+    name: 'Forth project',
+    description: 'some text',
+    image: ladder,
+    projectUrl: 'https://caoh29.github.io/'
+  },
+];
 
 // CONTACT
 export const ADDRESS_BOX_PROPS: BoxProps = {
   title: 'Contacts',
+  id: 'contact'
 };
 
 export const ADDRESS_LINES = [
@@ -118,6 +171,7 @@ export const ADDRESS_LINES = [
 // FEEDBACK
 export const FEEDBACK_BOX_PROPS: BoxProps = {
   title: 'Feedbacks',
+  id: 'feedback'
 };
 
 export const FEEDBACK_PROPS: FeedbackProps = {

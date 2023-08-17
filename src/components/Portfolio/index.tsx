@@ -4,6 +4,12 @@ import Isotope from 'isotope-layout';
 
 import PortfolioInfo from '../PortfolioInfo';
 
+import { handleTabsColorChange } from '../../utils/helpers';
+import {
+  PORTFOLIO_CATEGORIES,
+  PORTFOLIO_PROJECTS,
+} from '../../utils/constants';
+
 export default function Portfolio() {
   const containerRef = useRef<HTMLUListElement | null>(null);
   const isotope = useRef<Isotope | null>(null);
@@ -27,23 +33,29 @@ export default function Portfolio() {
   return (
     <div className="portfolio">
       <ul className="tabs">
-        <li onClick={() => handleFilter('*')}>All</li>
-        <li onClick={() => handleFilter('.ui')}>UI</li>
-        <li onClick={() => handleFilter('.code')}>Code</li>
+        {PORTFOLIO_CATEGORIES.map((category) => (
+          <li
+            key={category.selector}
+            onClick={(e) => {
+              handleFilter(category.selector);
+              handleTabsColorChange(e);
+            }}
+          >
+            {category.value}
+          </li>
+        ))}
       </ul>
       <ul className="filter-container" ref={containerRef}>
-        <li className="filter-item ui">
-          <img src="" alt="" />
-          <PortfolioInfo title={'UI'} text={'UI'} url={''} />
-        </li>
-        <li className="filter-item ui code">
-          <img src="" alt="" />
-          <PortfolioInfo title={'UI + CODE'} text={'UI + CODE'} url={''} />
-        </li>
-        <li className="filter-item code">
-          <img src="" alt="" />
-          <PortfolioInfo title={'CODE'} text={'CODE'} url={''} />
-        </li>
+        {PORTFOLIO_PROJECTS.map((project) => (
+          <li className={`filter-item ${project.className}`} key={project.name}>
+            <img src={project.image} alt={project.name} />
+            <PortfolioInfo
+              title={project.name}
+              text={project.description}
+              url={project.projectUrl}
+            />
+          </li>
+        ))}
       </ul>
     </div>
   );
