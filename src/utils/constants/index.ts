@@ -192,6 +192,22 @@ export const FEEDBACK_PROPS: FeedbackProps = {
         citeUrl: 'https://www.citeexample.com/2'
       }
     },
+    {
+      feedback: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor',
+      reporter: {
+        photoUrl: 'https://www.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg',
+        name: 'Pepito Perez',
+        citeUrl: 'https://www.citeexample.com/2'
+      }
+    },
+    {
+      feedback: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor',
+      reporter: {
+        photoUrl: 'https://www.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg',
+        name: 'Paula Manrique',
+        citeUrl: 'https://www.citeexample.com/2'
+      }
+    },
   ]
 }
 // NAVIGATION

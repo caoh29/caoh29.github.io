@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -14,6 +14,7 @@ import {
   FEEDBACK_BOX_PROPS,
   FEEDBACK_PROPS,
 } from '../../utils/constants';
+import { navHighlighter } from '../../utils/helpers';
 
 import { ButtonProps } from '../../types';
 
@@ -32,6 +33,15 @@ const BUTTON_PROPS: ButtonProps = {
 
 export default function InnerPage() {
   const [isOpen, setIsOpen] = useState(true);
+
+  useEffect(() => {
+    navHighlighter();
+    window.addEventListener('scroll', navHighlighter);
+    return () => {
+      window.removeEventListener('scroll', navHighlighter);
+    };
+  }, [isOpen]);
+
   return (
     <main className="inner">
       {isOpen && <Panel />}
