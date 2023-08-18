@@ -12,7 +12,7 @@ export const PHOTO_BOX_PROPS: PhotoBoxProps = {
   name: 'Camilo Ordonez',
   title: 'Mechanical Engineer and Frontend developer',
   description:
-    'I am a software engineer with a passion for building things. I enjoy solving problems, with and without code',
+    'I have a passion for building things. I enjoy solving problems, with and without code',
   avatar: avatarImage,
 };
 
@@ -21,7 +21,7 @@ export const ABOUT_BOX_PROPS: BoxProps = {
   title: 'About me',
   id: 'about',
   content:
-    'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque',
+    'Respectful and responsible person,with remarkable academic and social performance, good knowledge in the computer area, excellent communication in English and Spanish. Characterized by teamwork, critical thinking and the ability to adapt to different situations.',
 };
 
 // TIMELINE
@@ -33,19 +33,22 @@ export const TIMELINE_BOX_PROPS: BoxProps = {
 export const TIMELINE_PROPS: TimeLineProps = {
   data: [
     {
-      date: 2001,
-      title: 'Title 0',
-      text: 'Elit voluptate ad nostrud laboris. Elit incididunt mollit enim enim id id laboris dolore et et mollit. Mollit adipisicing ullamco exercitation ullamco proident aute enim nisi. Dolore eu fugiat consectetur nulla sunt Lorem ex ad. Anim eiusmod do tempor fugiat minim do aliqua amet ex dolore velit.\r\n',
+      date: 2023,
+      title: 'Computer Programming Diploma',
+      text: 'Georgian College @ ILAC, Toronto, Canada',
     },
     {
-      date: 2000,
-      title: 'Title 1',
-      text: 'Et irure culpa ad proident labore excepteur elit dolore. Quis commodo elit culpa eiusmod dolor proident non commodo excepteur aute duis duis eu fugiat. Eu duis occaecat nulla eiusmod non esse cillum est aute elit amet cillum commodo.\r\n',
+      date: 2021,
+      title: 'Bachelor in Mechanical Engineering',
+      text: `
+        Universidad Industrial de Santander, Bucaramanga, Colombia 
+        My thesis consisted of the creation of a Digital Learning Object based on Numerical Methods using eXe Learning under IEEE's compliance standards
+      `,
     },
     {
-      date: 2012,
-      title: 'Title 2',
-      text: 'Labore esse tempor nisi non mollit enim elit ullamco veniam elit duis nostrud. Enim pariatur ullamco dolor eu sunt ad velit aute eiusmod aliquip voluptate. Velit magna labore eiusmod eiusmod labore amet eiusmod. In duis eiusmod commodo duis. Exercitation Lorem sint do aliquip veniam duis elit quis culpa irure quis nulla. Reprehenderit fugiat amet sint commodo ex.\r\n',
+      date: 2014,
+      title: 'High School Degree',
+      text: 'Colegio Franciscano del Virrey Solís, Bucaramanga, Colombia',
     },
   ]
 };
@@ -59,19 +62,39 @@ export const EXPERTISE_BOX_PROPS: BoxProps = {
 export const EXPERTISE_PROPS: ExpertiseProps = {
   data: [
     {
-      date: '2013-2014', 
+      date: 'Jul 2023 - Aug 2023', 
       info: {
-        company: 'Google',
-        job: 'Front-end developer / php programmer',
-        description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor'
+        company: 'EPAM',
+        job: 'Junior Software Engineer',
+        description: `
+        • Design and deployment of UIs using React, Redux, React Router, TypeScript, JavaScript, SASS, Styled Components, Axios, Formik\n
+        • Unit and Integration testing of UIs using Jest and React Testing Library
+        `
       }
     },
     {
-      date: '2012', 
+      date: 'Feb 2022 - Jun 2023', 
       info: {
-        company: 'Twitter',
-        job: 'Web developer',
-        description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor'
+        company: 'Deloitte',
+        job: 'Cloud Engineer Consultant',
+        description: `
+        • Automated testing of regression tests using Tricentis TOSCA
+        • Design and management of AWS cloud infrastructure using EC2, ELB, Lambda, API Gateway, DynamoDB and Cognito
+        • Migration of database objects using DMS for RDS
+        `
+      }
+    },
+    {
+      date: 'Oct 2022 - Dec 2022', 
+      info: {
+        company: 'Falcon',
+        job: 'Quality Engineer',
+        description: `
+        • Preparation of inspection reports
+        • NDT testing of oil cranes and rigs
+        • Tool calibration
+        • File maintenance and SGSS
+        `
       }
     },
   ]
@@ -151,13 +174,13 @@ export const ADDRESS_LINES = [
   {
     title: 'Twitter',
     href: 'https://twitter.com/92iMAHC',
-    content: 'https://twitter.com/92iMAHC',
+    content: '92iMAHC',
     icon: faXTwitter,
   },
   {
     title: 'Facebook',
     href: 'https://www.facebook.com/camilo.ordonez.39/',
-    content: 'https://www.facebook.com/camilo.ordonez.39/',
+    content: 'camilo.ordonez.39',
     icon: faFacebookF,
   },
   {
@@ -196,16 +219,8 @@ export const FEEDBACK_PROPS: FeedbackProps = {
       feedback: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor',
       reporter: {
         photoUrl: 'https://www.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg',
-        name: 'Pepito Perez',
-        citeUrl: 'https://www.citeexample.com/2'
-      }
-    },
-    {
-      feedback: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor',
-      reporter: {
-        photoUrl: 'https://www.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg',
         name: 'Paula Manrique',
-        citeUrl: 'https://www.citeexample.com/2'
+        citeUrl: 'https://www.citeexample.com/3'
       }
     },
   ]

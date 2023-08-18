@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
+import { navHighlighter } from '../../utils/helpers';
 import {
   ABOUT_BOX_PROPS,
   TIMELINE_BOX_PROPS,
@@ -14,7 +15,6 @@ import {
   FEEDBACK_BOX_PROPS,
   FEEDBACK_PROPS,
 } from '../../utils/constants';
-import { navHighlighter } from '../../utils/helpers';
 
 import { ButtonProps } from '../../types';
 

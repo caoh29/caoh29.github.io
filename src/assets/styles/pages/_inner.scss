@@ -3,10 +3,10 @@
 
 .inner {
   display: flex;
-  width: 100vw;
+  width: 100%;
 
   .content {
-    margin-right: 20px;
+    margin-right: 10px;
   }
 
   & > .button {
@@ -15,7 +15,7 @@
     width: 30px;
     height: 30px;
     padding: 8px;
-    margin-right: 20px;
+    margin-right: 5px;
   }
 
   .panel {
@@ -68,7 +68,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .inner {
     display: flex;
 
