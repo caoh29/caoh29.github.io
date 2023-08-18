@@ -12,7 +12,7 @@ export const navHighlighter = () => {
   let actualPositionInY: number = window.scrollY;
 
   sections.forEach((section) => {
-    const sectionStart = section.offsetTop - 50;
+    const sectionStart = section.offsetTop - 60;
     const sectionEnd = sectionStart + section.offsetHeight;
     const sectionId = section.getAttribute('id');
 
