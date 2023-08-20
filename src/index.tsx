@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './assets/styles/style.scss';
 import store from './store/store';
+import { makeServer } from './services/server';
 import reportWebVitals from './reportWebVitals';
 import HomePage from './pages/Home/HomePage';
 import InnerPage from './pages/Inner/InnerPage';
@@ -21,6 +22,8 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
 ]);
+
+makeServer();
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

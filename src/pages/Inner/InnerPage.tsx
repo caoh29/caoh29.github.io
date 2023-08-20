@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -11,7 +11,6 @@ import {
   TIMELINE_BOX_PROPS,
   EXPERTISE_BOX_PROPS,
   PORTFOLIO_BOX_PROPS,
-  TIMELINE_PROPS,
   EXPERTISE_PROPS,
   ADDRESS_BOX_PROPS,
   FEEDBACK_BOX_PROPS,
@@ -37,6 +36,7 @@ const BUTTON_PROPS: ButtonProps = {
 };
 
 export default function InnerPage() {
+  const [timelineData, setTimelineData] = useState({ data: [] });
   const dispatch = useDispatch();
   const isOpen: boolean = useSelector(
     (state: RootState) => state.panelReducer.isOpen
@@ -49,6 +49,16 @@ export default function InnerPage() {
       window.removeEventListener('scroll', navHighlighter);
     };
   }, [isOpen]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await fetch('http://localhost:4000/api/educations');
+      const resultJSON = await result.json();
+      setTimelineData(resultJSON);
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <main className="inner">
@@ -64,7 +74,7 @@ export default function InnerPage() {
           id={ABOUT_BOX_PROPS.id}
         />
         <Box title={TIMELINE_BOX_PROPS.title} id={TIMELINE_BOX_PROPS.id}>
-          <TimeLine data={TIMELINE_PROPS.data} />
+          <TimeLine data={timelineData.data} />
         </Box>
         <Box title={EXPERTISE_BOX_PROPS.title} id={EXPERTISE_BOX_PROPS.id}>
           <Expertise data={EXPERTISE_PROPS.data} />
