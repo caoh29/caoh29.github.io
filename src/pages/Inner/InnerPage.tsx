@@ -1,4 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+
+import { useDispatch, useSelector } from 'react-redux';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -18,6 +20,9 @@ import {
 
 import { ButtonProps } from '../../types';
 
+import { RootState } from '../../store/store';
+import { togglePanel } from '../../store/reducers/togglePanelSlice';
+
 import Button from '../../components/Button';
 import Panel from '../../components/Panel';
 import Box from '../../components/Box';
@@ -32,7 +37,10 @@ const BUTTON_PROPS: ButtonProps = {
 };
 
 export default function InnerPage() {
-  const [isOpen, setIsOpen] = useState(true);
+  const dispatch = useDispatch();
+  const isOpen: boolean = useSelector(
+    (state: RootState) => state.panelReducer.isOpen
+  );
 
   useEffect(() => {
     navHighlighter();
@@ -45,7 +53,10 @@ export default function InnerPage() {
   return (
     <main className="inner">
       {isOpen && <Panel />}
-      <Button icon={BUTTON_PROPS.icon} onClick={() => setIsOpen(!isOpen)} />
+      <Button
+        icon={BUTTON_PROPS.icon}
+        onClick={() => dispatch(togglePanel())}
+      />
       <div className="content">
         <Box
           title={ABOUT_BOX_PROPS.title}

@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './assets/styles/style.scss';
+import store from './store/store';
 import reportWebVitals from './reportWebVitals';
 import HomePage from './pages/Home/HomePage';
 import InnerPage from './pages/Inner/InnerPage';
@@ -25,7 +27,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
 
