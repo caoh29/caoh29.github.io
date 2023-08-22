@@ -26,11 +26,9 @@ export interface InfoProps {
 }
 
 export interface TimeLineProps {
-  data: {
-    date: number;
-    title: string;
-    text: string;
-  }[];
+  date: number;
+  title: string;
+  text: string;
 }
 
 export interface ExpertiseProps {

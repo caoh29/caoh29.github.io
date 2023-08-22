@@ -1,6 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
+import { ThunkDispatch } from 'redux-thunk';
+import { AnyAction } from '@reduxjs/toolkit';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -21,6 +23,7 @@ import { ButtonProps } from '../../types';
 
 import { RootState } from '../../store/store';
 import { togglePanel } from '../../store/reducers/togglePanelSlice';
+import { fetchTimelineData } from '../../store/reducers/fetchTimelineSlice';
 
 import Button from '../../components/Button';
 import Panel from '../../components/Panel';
@@ -31,16 +34,17 @@ import Portfolio from '../../components/Portfolio';
 import Address from '../../components/Address';
 import Feedback from '../../components/Feedback';
 
+type AsyncDispatch = ThunkDispatch<RootState, {}, AnyAction>;
+
 const BUTTON_PROPS: ButtonProps = {
   icon: <FontAwesomeIcon icon={faBars} />,
 };
 
 export default function InnerPage() {
-  const [timelineData, setTimelineData] = useState({ data: [] });
-  const dispatch = useDispatch();
-  const isOpen: boolean = useSelector(
-    (state: RootState) => state.panelReducer.isOpen
-  );
+  const dispatch = useDispatch<AsyncDispatch>();
+  const state = useSelector((state: RootState) => state);
+  const isOpen = state.panelReducer.isOpen;
+  const timelineData = state.fetchTimelineReducer.content;
 
   useEffect(() => {
     navHighlighter();
@@ -51,14 +55,8 @@ export default function InnerPage() {
   }, [isOpen]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const result = await fetch('http://localhost:4000/api/educations');
-      const resultJSON = await result.json();
-      setTimelineData(resultJSON);
-    };
-
-    fetchData();
-  }, []);
+    dispatch(fetchTimelineData('http://localhost:4000/api/educations'));
+  }, [dispatch]);
 
   return (
     <main className="inner">
@@ -74,7 +72,7 @@ export default function InnerPage() {
           id={ABOUT_BOX_PROPS.id}
         />
         <Box title={TIMELINE_BOX_PROPS.title} id={TIMELINE_BOX_PROPS.id}>
-          <TimeLine data={timelineData.data} />
+          <TimeLine data={timelineData} />
         </Box>
         <Box title={EXPERTISE_BOX_PROPS.title} id={EXPERTISE_BOX_PROPS.id}>
           <Expertise data={EXPERTISE_PROPS.data} />

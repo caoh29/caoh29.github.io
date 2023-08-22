@@ -30,28 +30,26 @@ export const TIMELINE_BOX_PROPS: BoxProps = {
   id: 'education',
 };
 
-export const TIMELINE_PROPS: TimeLineProps = {
-  data: [
-    {
-      date: 2023,
-      title: 'Computer Programming Diploma',
-      text: 'Georgian College @ ILAC, Toronto, Canada',
-    },
-    {
-      date: 2021,
-      title: 'Bachelor in Mechanical Engineering',
-      text: `
-        Universidad Industrial de Santander, Bucaramanga, Colombia 
-        My thesis consisted of the creation of a Digital Learning Object based on Numerical Methods using eXe Learning under IEEE's compliance standards
-      `,
-    },
-    {
-      date: 2014,
-      title: 'High School Degree',
-      text: 'Colegio Franciscano del Virrey Solís, Bucaramanga, Colombia',
-    },
-  ]
-};
+export const TIMELINE_PROPS: TimeLineProps[] = [
+  {
+    date: 2023,
+    title: 'Computer Programming Diploma',
+    text: 'Georgian College @ ILAC, Toronto, Canada',
+  },
+  {
+    date: 2021,
+    title: 'Bachelor in Mechanical Engineering',
+    text: `
+      Universidad Industrial de Santander, Bucaramanga, Colombia 
+      My thesis consisted of the creation of a Digital Learning Object based on Numerical Methods using eXe Learning under IEEE's compliance standards
+    `,
+  },
+  {
+    date: 2014,
+    title: 'High School Degree',
+    text: 'Colegio Franciscano del Virrey Solís, Bucaramanga, Colombia',
+  },
+];
 
 // EXPERIENCE
 export const EXPERTISE_BOX_PROPS: BoxProps = {

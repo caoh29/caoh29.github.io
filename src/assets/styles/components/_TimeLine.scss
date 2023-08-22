@@ -5,6 +5,18 @@
   min-height: 30vh;
   max-height: 80vh;
   overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+
+  .timeline-spinner {
+    color: colors.$primary;
+    animation: spin 1s linear infinite;
+  }
+
+  .timeline-error {
+    color: red;
+  }
 
   .timeline-list {
     position: relative;
@@ -49,5 +61,14 @@
         border-right: 10px solid colors.$forth;
       }
     }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Start rotation from 0 degrees */
+  }
+  100% {
+    transform: rotate(360deg); /* End rotation at 360 degrees */
   }
 }

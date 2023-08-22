@@ -6,8 +6,8 @@ export function makeServer() {
       this.urlPrefix = 'http://localhost:4000';
       this.namespace = "api"
 
-      this.get("/educations", () => ({
-        data: [
+      this.get("/educations", () => (
+        [
           {
             date: 2023,
             title: 'Computer Programming Diploma',
@@ -27,7 +27,7 @@ export function makeServer() {
             text: 'Colegio Franciscano del Virrey Solís, Bucaramanga, Colombia',
           },
         ]
-    }), { timing: 3000 })
+    ), { timing: 3000 })
     },
   });
   return server
