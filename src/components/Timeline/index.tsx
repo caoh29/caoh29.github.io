@@ -10,11 +10,9 @@ import Info from '../Info';
 
 export default function TimeLine({ data }: { data: TimeLineProps[] }) {
   const isLoading = useSelector(
-    (state: RootState) => state.fetchTimelineReducer.isLoading
+    (state: RootState) => state.educationReducer.isLoading
   );
-  const error = useSelector(
-    (state: RootState) => state.fetchTimelineReducer.error
-  );
+  const error = useSelector((state: RootState) => state.educationReducer.error);
   return (
     <div className="timeline">
       {isLoading && (

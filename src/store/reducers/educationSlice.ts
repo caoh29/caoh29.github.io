@@ -1,13 +1,13 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { TimeLineProps } from '../../types';
 
-interface fetchTimelineState {
+interface EducationState {
   content: TimeLineProps[];
   isLoading: boolean;
   error: string | null;
 }
 
-const initialState : fetchTimelineState = {
+const initialState : EducationState = {
   content: [],
   isLoading: false,
   error: null
@@ -18,8 +18,8 @@ export const fetchTimelineData = createAsyncThunk('fetchTimelineData', async (ap
   return response.json();
 });
 
-export const fetchTimelineSlice = createSlice({
-  name: 'fetchTimelineReducer',
+export const educationSlice = createSlice({
+  name: 'educationReducer',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
@@ -40,4 +40,4 @@ export const fetchTimelineSlice = createSlice({
   }
 });
 
-export default fetchTimelineSlice.reducer;
+export default educationSlice.reducer;

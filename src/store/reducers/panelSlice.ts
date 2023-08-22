@@ -1,14 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-interface TogglePanelState {
+interface PanelState {
   isOpen: boolean;
 }
 
-const initialState : TogglePanelState = {
+const initialState : PanelState = {
   isOpen: true,
 };
 
-export const togglePanelSlice = createSlice({
+export const panelSlice = createSlice({
     name: 'panelReducer',
     initialState,
     reducers: {
@@ -18,6 +18,6 @@ export const togglePanelSlice = createSlice({
     },
 });
 
-export const { togglePanel } = togglePanelSlice.actions;
+export const { togglePanel } = panelSlice.actions;
 
-export default togglePanelSlice.reducer;
+export default panelSlice.reducer;

@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import panelReducer from "./reducers/togglePanelSlice";
-import fetchTimelineReducer from "./reducers/fetchTimelineSlice";
+import panelReducer from "./reducers/panelSlice";
+import educationReducer from "./reducers/educationSlice";
 
 const store = configureStore({
   reducer: {
     panelReducer,
-    fetchTimelineReducer,
+    educationReducer,
   }
 });
 

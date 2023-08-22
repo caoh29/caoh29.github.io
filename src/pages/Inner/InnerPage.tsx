@@ -22,8 +22,8 @@ import {
 import { ButtonProps } from '../../types';
 
 import { RootState } from '../../store/store';
-import { togglePanel } from '../../store/reducers/togglePanelSlice';
-import { fetchTimelineData } from '../../store/reducers/fetchTimelineSlice';
+import { togglePanel } from '../../store/reducers/panelSlice';
+import { fetchTimelineData } from '../../store/reducers/educationSlice';
 
 import Button from '../../components/Button';
 import Panel from '../../components/Panel';
@@ -44,7 +44,7 @@ export default function InnerPage() {
   const dispatch = useDispatch<AsyncDispatch>();
   const state = useSelector((state: RootState) => state);
   const isOpen = state.panelReducer.isOpen;
-  const timelineData = state.fetchTimelineReducer.content;
+  const timelineData = state.educationReducer.content;
 
   useEffect(() => {
     navHighlighter();
