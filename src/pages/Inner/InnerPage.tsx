@@ -17,13 +17,15 @@ import {
   ADDRESS_BOX_PROPS,
   FEEDBACK_BOX_PROPS,
   FEEDBACK_PROPS,
+  SKILLS_BOX_PROPS,
 } from '../../utils/constants';
 
 import { ButtonProps } from '../../types';
 
 import { RootState } from '../../store/store';
-import { togglePanel } from '../../store/reducers/panelSlice';
-import { fetchTimelineData } from '../../store/reducers/educationSlice';
+import { togglePanel } from '../../store/slices/panelSlice';
+import { fetchTimelineData } from '../../store/slices/educationSlice';
+import { fetchSkillsData } from '../../store/slices/skillsSlice';
 
 import Button from '../../components/Button';
 import Panel from '../../components/Panel';
@@ -33,6 +35,7 @@ import Expertise from '../../components/Expertise';
 import Portfolio from '../../components/Portfolio';
 import Address from '../../components/Address';
 import Feedback from '../../components/Feedback';
+import Skills from '../../components/Skills';
 
 type AsyncDispatch = ThunkDispatch<RootState, {}, AnyAction>;
 
@@ -45,6 +48,7 @@ export default function InnerPage() {
   const state = useSelector((state: RootState) => state);
   const isOpen = state.panelReducer.isOpen;
   const timelineData = state.educationReducer.content;
+  const skillsData = state.skillsReducer.data;
 
   useEffect(() => {
     navHighlighter();
@@ -56,6 +60,7 @@ export default function InnerPage() {
 
   useEffect(() => {
     dispatch(fetchTimelineData('http://localhost:4000/api/educations'));
+    dispatch(fetchSkillsData('http://localhost:4000/api/skills'));
   }, [dispatch]);
 
   return (
@@ -76,6 +81,9 @@ export default function InnerPage() {
         </Box>
         <Box title={EXPERTISE_BOX_PROPS.title} id={EXPERTISE_BOX_PROPS.id}>
           <Expertise data={EXPERTISE_PROPS.data} />
+        </Box>
+        <Box title={SKILLS_BOX_PROPS.title} id={SKILLS_BOX_PROPS.id}>
+          <Skills data={skillsData} />
         </Box>
         <Box title={PORTFOLIO_BOX_PROPS.title} id={PORTFOLIO_BOX_PROPS.id}>
           <Portfolio />

@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-import panelReducer from "./reducers/panelSlice";
-import educationReducer from "./reducers/educationSlice";
+import panelReducer from "./slices/panelSlice";
+import educationReducer from "./slices/educationSlice";
+import skillsReducer from "./slices/skillsSlice";
 
 const store = configureStore({
   reducer: {
     panelReducer,
     educationReducer,
+    skillsReducer,
   }
 });
 

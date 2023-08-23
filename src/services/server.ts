@@ -4,7 +4,7 @@ export function makeServer() {
   let server = createServer({
     routes() {
       this.urlPrefix = 'http://localhost:4000';
-      this.namespace = "api"
+      this.namespace = "api";
 
       this.get("/educations", () => (
         [
@@ -27,7 +27,24 @@ export function makeServer() {
             text: 'Colegio Franciscano del Virrey Solís, Bucaramanga, Colombia',
           },
         ]
-    ), { timing: 3000 })
+      ), { timing: 3000 });
+      
+      this.get("/skills", () => (
+        [
+          {
+            range: 70,
+            name: 'React',
+          },
+          {
+            range: 60,
+            name: 'JavaScript',
+          },
+          {
+            range: 30,
+            name: 'SASS',
+          },
+        ]
+      ), { timing: 3000 })
     },
   });
   return server

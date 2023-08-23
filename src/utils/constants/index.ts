@@ -5,7 +5,7 @@ import avatarImage from '../../assets/images/avatar.jpg';
 import ladder from '../../assets/images/ladder.png';
 import loupe from '../../assets/images/loupe.png';
 
-import { PhotoBoxProps, BoxProps, TimeLineProps, ExpertiseProps, FeedbackProps } from '../../types';
+import { PhotoBoxProps, BoxProps, TimeLineProps, ExpertiseProps, FeedbackProps, SkillsProps } from '../../types';
 
 // PHOTO BOX
 export const PHOTO_BOX_PROPS: PhotoBoxProps = {
@@ -97,6 +97,27 @@ export const EXPERTISE_PROPS: ExpertiseProps = {
     },
   ]
 };
+
+// SKILLS
+export const SKILLS_BOX_PROPS: BoxProps = {
+  title: 'Skills',
+  id: 'skills',
+};
+
+export const SKILLS_PROPS: SkillsProps[] = [
+  {
+    range: 70,
+    name: 'React',
+  },
+  {
+    range: 60,
+    name: 'JavaScript',
+  },
+  {
+    range: 30,
+    name: 'SASS',
+  },
+];
 
 // PORTFOLIO
 export const PORTFOLIO_BOX_PROPS: BoxProps = {

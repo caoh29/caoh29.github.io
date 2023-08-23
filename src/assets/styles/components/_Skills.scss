@@ -1,0 +1,85 @@
+@use '../abstracts/colors';
+@use '../abstracts/variables';
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .skills-list {
+    padding: 15px 0;
+    width: 100%;
+
+    .skill {
+      margin-bottom: 5px;
+
+      .skill-bar {
+        display: flex;
+        align-items: center;
+        height: 30px;
+        background: colors.$primary;
+      }
+
+      .skill-name {
+        color: colors.$white;
+        padding-left: 15px;
+      }
+    }
+  }
+
+  .scale-bar {
+    display: flex;
+    width: 100%;
+    border-top: 1px solid colors.$ternary;
+
+    .scale-label {
+      flex: 1;
+      text-align: start;
+      font-size: 12px;
+      color: colors.$ternary;
+
+      // &::before {
+      //   background: colors.$primary;
+      //   position: fixed;
+      //   top: 0;
+      //   bottom: 0;
+      //   width: 4px;
+      //   content: "";
+      //   margin-left: 50px;
+      // }
+
+      &:nth-last-child(2) {
+        text-align: center;
+      }
+
+      &:last-child {
+        text-align: end;
+      }
+    }
+  }
+}
+
+.skills-spinner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .skills-spinner {
+    color: colors.$primary;
+    animation: spin 1s linear infinite;
+  }
+}
+
+.skills-error {
+  color: red;
+  text-align: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Start rotation from 0 degrees */
+  }
+  100% {
+    transform: rotate(360deg); /* End rotation at 360 degrees */
+  }
+}
