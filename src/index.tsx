@@ -1,27 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import './assets/styles/style.scss';
 import store from './store/store';
 import { makeServer } from './services/server';
 import reportWebVitals from './reportWebVitals';
+import PrivateRoutes from './utils/helpers/PrivateRoutes';
+
 import HomePage from './pages/Home/HomePage';
 import InnerPage from './pages/Inner/InnerPage';
 import ErrorPage from './pages/Error/ErrorPage';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <HomePage />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: '/inner',
-    element: <InnerPage />,
-    errorElement: <ErrorPage />,
-  },
-]);
+import AdminPage from './pages/Admin/AdminPage';
+import LoginPage from './pages/Login/LoginPage';
 
 makeServer();
 
@@ -31,7 +22,17 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <BrowserRouter>
+        <Routes>
+          <Route element={<PrivateRoutes />}>
+            <Route path="/admin" element={<AdminPage />} />
+          </Route>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/inner" element={<InnerPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>
 );
