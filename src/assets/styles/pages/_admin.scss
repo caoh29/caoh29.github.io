@@ -1,19 +1,12 @@
 @use '../abstracts/colors';
 @use '../abstracts/variables';
 
-.inner {
+.admin {
   display: flex;
   width: 100%;
 
   .content {
     margin-right: 10px;
-
-    .login-container {
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-      margin-bottom: 5px;
-    }
   }
 
   & > .button {
