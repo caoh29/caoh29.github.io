@@ -1,11 +1,15 @@
 import { useEffect } from 'react';
 
+import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
 import { AnyAction } from '@reduxjs/toolkit';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBars,
+  faArrowRightToBracket,
+} from '@fortawesome/free-solid-svg-icons';
 
 import { navHighlighter } from '../../utils/helpers';
 import {
@@ -39,11 +43,16 @@ import Skills from '../../components/Skills';
 
 type AsyncDispatch = ThunkDispatch<RootState, {}, AnyAction>;
 
-const BUTTON_PROPS: ButtonProps = {
+const MENU_BUTTON_PROPS: ButtonProps = {
   icon: <FontAwesomeIcon icon={faBars} />,
 };
 
+const LOGIN_BUTTON_PROPS: ButtonProps = {
+  icon: <FontAwesomeIcon icon={faArrowRightToBracket} />,
+};
+
 export default function InnerPage() {
+  const navigate = useNavigate();
   const dispatch = useDispatch<AsyncDispatch>();
   const state = useSelector((state: RootState) => state);
   const isOpen = state.panelReducer.isOpen;
@@ -67,7 +76,7 @@ export default function InnerPage() {
     <main className="inner">
       {isOpen && <Panel />}
       <Button
-        icon={BUTTON_PROPS.icon}
+        icon={MENU_BUTTON_PROPS.icon}
         onClick={() => dispatch(togglePanel())}
       />
       <div className="content">
@@ -94,6 +103,12 @@ export default function InnerPage() {
         <Box title={FEEDBACK_BOX_PROPS.title} id={FEEDBACK_BOX_PROPS.id}>
           <Feedback data={FEEDBACK_PROPS.data} />
         </Box>
+        <div className="login-container">
+          <Button
+            icon={LOGIN_BUTTON_PROPS.icon}
+            onClick={() => navigate('/login')}
+          />
+        </div>
       </div>
     </main>
   );

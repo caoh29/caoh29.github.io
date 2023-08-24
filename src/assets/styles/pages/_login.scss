@@ -1,0 +1,52 @@
+@use '../abstracts/colors';
+@use '../abstracts/variables';
+
+.login {
+  height: 100vh;
+  background-image: url('../../images/background.png');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: colors.$forth;
+
+  .form {
+    font-weight: variables.$regularTextWeight;
+    font-size: 14px;
+    line-height: 21px;
+    color: colors.$forth;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 300px;
+
+
+    .form-element {
+      display: flex;
+      flex-direction: column;
+      color: colors.$error;
+      gap: 10px;
+
+      .form-line {
+        display: grid;
+        grid-template-columns: 70px 200px;
+        align-items: center;
+        justify-content: center;
+        color: colors.$forth;
+
+        input {
+          margin-left: 20px;
+          padding: 10px;
+          height: 40px;
+          border-color: colors.$ternary;
+          border-radius: 5px;
+          border-style: solid;
+          color: colors.$secondary
+        }
+      }
+    }
+  }
+}

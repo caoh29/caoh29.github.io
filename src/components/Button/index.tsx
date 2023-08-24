@@ -1,8 +1,8 @@
 import { ButtonProps } from '../../types';
 
-export default function Button({ text, icon, onClick }: ButtonProps) {
+export default function Button({ text, icon, type, onClick }: ButtonProps) {
   return (
-    <button className="button" onClick={onClick}>
+    <button className="button" type={type} onClick={onClick}>
       {icon} <span className="button-text">{text}</span>
     </button>
   );
