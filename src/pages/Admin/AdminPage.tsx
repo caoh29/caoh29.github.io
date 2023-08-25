@@ -24,8 +24,14 @@ import { ButtonProps } from '../../types';
 
 import { RootState } from '../../store/store';
 import { togglePanel } from '../../store/slices/panelSlice';
-import { fetchTimelineData } from '../../store/slices/educationSlice';
-import { fetchSkillsData } from '../../store/slices/skillsSlice';
+import {
+  fetchTimelineData,
+  toggleEducationForm,
+} from '../../store/slices/educationSlice';
+import {
+  fetchSkillsData,
+  toggleSkillsForm,
+} from '../../store/slices/skillsSlice';
 
 import Button from '../../components/Button';
 import Panel from '../../components/Panel';
@@ -36,6 +42,7 @@ import Portfolio from '../../components/Portfolio';
 import Address from '../../components/Address';
 import Feedback from '../../components/Feedback';
 import Skills from '../../components/Skills';
+import SkillsForm from '../../components/Skills/SkillsForm';
 
 type AsyncDispatch = ThunkDispatch<RootState, {}, AnyAction>;
 
@@ -43,16 +50,14 @@ const MENU_BUTTON_PROPS: ButtonProps = {
   icon: <FontAwesomeIcon icon={faBars} />,
 };
 
-const EDIT_BUTTON = (
-  <Button text="Open edit" icon={<FontAwesomeIcon icon={faPenToSquare} />} />
-);
-
 export default function AdminPage() {
   const dispatch = useDispatch<AsyncDispatch>();
   const state = useSelector((state: RootState) => state);
   const isOpen = state.panelReducer.isOpen;
-  const timelineData = state.educationReducer.content;
-  const skillsData = state.skillsReducer.data;
+  const { content: timelineData, isFormOpen: isTimelineFormOpen } =
+    state.educationReducer;
+  const { data: skillsData, isFormOpen: isSkillsFormOpen } =
+    state.skillsReducer;
 
   useEffect(() => {
     navHighlighter();
@@ -83,7 +88,13 @@ export default function AdminPage() {
         <Box
           title={TIMELINE_BOX_PROPS.title}
           id={TIMELINE_BOX_PROPS.id}
-          button={EDIT_BUTTON}
+          button={
+            <Button
+              text="Open edit"
+              icon={<FontAwesomeIcon icon={faPenToSquare} />}
+              onClick={() => dispatch(toggleEducationForm())}
+            />
+          }
         >
           <TimeLine data={timelineData} />
         </Box>
@@ -93,8 +104,15 @@ export default function AdminPage() {
         <Box
           title={SKILLS_BOX_PROPS.title}
           id={SKILLS_BOX_PROPS.id}
-          button={EDIT_BUTTON}
+          button={
+            <Button
+              text="Open edit"
+              icon={<FontAwesomeIcon icon={faPenToSquare} />}
+              onClick={() => dispatch(toggleSkillsForm())}
+            />
+          }
         >
+          {isSkillsFormOpen && <SkillsForm />}
           <Skills data={skillsData} />
         </Box>
         <Box title={PORTFOLIO_BOX_PROPS.title} id={PORTFOLIO_BOX_PROPS.id}>

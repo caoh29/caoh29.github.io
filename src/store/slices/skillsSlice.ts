@@ -5,12 +5,14 @@ interface SkillsState {
   data: SkillsProps[];
   isLoading: boolean;
   error: string | null;
+  isFormOpen: boolean;
 }
 
 const initialState : SkillsState = {
   data: [],
   isLoading: false,
-  error: null
+  error: null,
+  isFormOpen: false
 };
 
 export const fetchSkillsData = createAsyncThunk('fetchSkillsData', async (apiURL : string) => {
@@ -21,7 +23,11 @@ export const fetchSkillsData = createAsyncThunk('fetchSkillsData', async (apiURL
 export const skillsSlice = createSlice({
   name: 'skillsReducer',
   initialState,
-  reducers: {},
+  reducers: {
+    toggleSkillsForm: (state) => {
+      state.isFormOpen = !state.isFormOpen;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchSkillsData.pending, (state) => {
@@ -39,5 +45,7 @@ export const skillsSlice = createSlice({
       })
   }
 });
+
+export const { toggleSkillsForm } = skillsSlice.actions;
 
 export default skillsSlice.reducer;

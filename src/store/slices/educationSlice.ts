@@ -5,12 +5,14 @@ interface EducationState {
   content: TimeLineProps[];
   isLoading: boolean;
   error: string | null;
+  isFormOpen: boolean;
 }
 
 const initialState : EducationState = {
   content: [],
   isLoading: false,
-  error: null
+  error: null,
+  isFormOpen: false,
 };
 
 export const fetchTimelineData = createAsyncThunk('fetchTimelineData', async (apiURL : string) => {
@@ -21,7 +23,11 @@ export const fetchTimelineData = createAsyncThunk('fetchTimelineData', async (ap
 export const educationSlice = createSlice({
   name: 'educationReducer',
   initialState,
-  reducers: {},
+  reducers: {
+    toggleEducationForm: (state) => {
+      state.isFormOpen = !state.isFormOpen;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchTimelineData.pending, (state) => {
@@ -39,5 +45,7 @@ export const educationSlice = createSlice({
       })
   }
 });
+
+export const { toggleEducationForm } = educationSlice.actions;
 
 export default educationSlice.reducer;
