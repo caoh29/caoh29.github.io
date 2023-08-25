@@ -1,5 +1,5 @@
 import { faUser, faGraduationCap, faPen, faGem, faSuitcase, faLocationArrow, faComment, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faXTwitter, faFacebookF, faSkype } from '@fortawesome/free-brands-svg-icons';
+import { faXTwitter, faFacebookF, faInstagram, faLinkedin, faGithub, faSkype } from '@fortawesome/free-brands-svg-icons';
 
 import avatarImage from '../../assets/images/avatar.jpg';
 import ladder from '../../assets/images/ladder.png';
@@ -201,6 +201,24 @@ export const ADDRESS_LINES = [
     href: 'https://www.facebook.com/camilo.ordonez.39/',
     content: 'camilo.ordonez.39',
     icon: faFacebookF,
+  },
+  {
+    title: 'Instagram',
+    href: 'https://www.instagram.com/camiloordonez39/',
+    content: 'camiloordonez.39',
+    icon: faInstagram,
+  },
+  {
+    title: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/camilo-ordo%C3%B1ez-herrera-04a47511b/',
+    content: 'Camilo Ordonez Herrera',
+    icon: faLinkedin,
+  },
+  {
+    title: 'GitHub',
+    href: 'https://github.com/caoh29',
+    content: 'caoh29',
+    icon: faGithub,
   },
   {
     title: 'Skype',
