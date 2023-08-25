@@ -13,6 +13,9 @@ export default function TimeLine({ data }: { data: TimeLineProps[] }) {
     (state: RootState) => state.educationReducer.isLoading
   );
   const error = useSelector((state: RootState) => state.educationReducer.error);
+
+  const sortedData = [...data].sort((a, b) => b.date - a.date);
+
   return (
     <div className="timeline">
       {isLoading && (
@@ -22,7 +25,7 @@ export default function TimeLine({ data }: { data: TimeLineProps[] }) {
       )}
       {error === null && !isLoading && (
         <ul className="timeline-list">
-          {data.map((item) => (
+          {sortedData.map((item) => (
             <li key={item.title}>
               <div className="timeline-date">{item.date}</div>
               <div className="timeline-event">

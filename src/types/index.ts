@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 export interface ButtonProps {
   text?: string;
   icon?: ReactNode;
+  disabled?: boolean;
   type?: 'submit' | 'reset' | 'button';
   onClick?: () => void;
 }

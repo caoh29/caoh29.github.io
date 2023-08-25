@@ -15,10 +15,32 @@ const initialState : EducationState = {
   isFormOpen: false,
 };
 
-export const fetchTimelineData = createAsyncThunk('fetchTimelineData', async (apiURL : string) => {
-  const response = await fetch(apiURL);
-  return response.json();
+export const fetchTimelineData = createAsyncThunk('fetchTimelineData', async (apiURL : string, {rejectWithValue}) => {
+  try {
+    const response = await fetch(apiURL);
+    return response.json();
+  } catch (error) {
+    return rejectWithValue(error);
+  }
 });
+
+export const postTimelineData = createAsyncThunk(
+  'postTimelineData',
+  async ({ apiURL, data }: { apiURL: string; data: TimeLineProps }, {rejectWithValue}) => {
+    try {
+      const response = await fetch(apiURL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      return response.json();
+    } catch (error) {
+      return rejectWithValue(error);
+    }
+  }
+);
 
 export const educationSlice = createSlice({
   name: 'educationReducer',
@@ -43,6 +65,19 @@ export const educationSlice = createSlice({
         state.isLoading = false;
         state.error = 'Something went wrong; please review your server connection!';
       })
+      .addCase(postTimelineData.pending, (state) => {
+        state.isLoading = true;
+        state.error = null;
+      })
+      .addCase(postTimelineData.fulfilled, (state, action) => {
+        state.content.push(action.payload);
+        state.isLoading = false;
+        state.error = null;
+      })
+      .addCase(postTimelineData.rejected, (state) => {
+        state.isLoading = false;
+        state.error = 'Failed to post data; please check your input and server connection.';
+      });
   }
 });
 

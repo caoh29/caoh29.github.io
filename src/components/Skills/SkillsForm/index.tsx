@@ -1,10 +1,23 @@
 import { ErrorMessage, Field, Formik, Form } from 'formik';
 import * as Yup from 'yup';
 
-import Button from '../../../components/Button';
+import { useDispatch, useSelector } from 'react-redux';
+import { AnyAction, ThunkDispatch } from '@reduxjs/toolkit';
+import { postSkillsData } from '../../../store/slices/skillsSlice';
+import { RootState } from '../../../store/store';
+
 import { SkillsProps } from '../../../types';
 
+import Button from '../../../components/Button';
+
+type AsyncDispatch = ThunkDispatch<RootState, {}, AnyAction>;
+
 export default function SkillsForm() {
+  const dispatch = useDispatch<AsyncDispatch>();
+  const isLoading = useSelector(
+    (state: RootState) => state.skillsReducer.isLoading
+  );
+
   const initialValues: SkillsProps = {
     name: '',
     range: 10,
@@ -25,7 +38,12 @@ export default function SkillsForm() {
     values: SkillsProps,
     { resetForm }: { resetForm: () => void }
   ) => {
-    console.log(values);
+    dispatch(
+      postSkillsData({
+        apiURL: 'http://localhost:4000/api/skills',
+        data: values,
+      })
+    );
     resetForm();
   };
 
@@ -59,7 +77,7 @@ export default function SkillsForm() {
             </div>
             <ErrorMessage name="range" />
           </div>
-          <Button text="Add skill" type="submit" />
+          <Button text="Add skill" type="submit" disabled={isLoading} />
         </Form>
       </Formik>
     </div>

@@ -12,3 +12,13 @@
     cursor: pointer;
   }
 }
+
+.button--disabled {
+  background-color: colors.$forth;
+  color: colors.$secondary;
+
+  &:hover {
+    background-color: colors.$forth;
+    cursor: not-allowed;
+  }
+}

@@ -44,7 +44,17 @@ export function makeServer() {
             name: 'SASS',
           },
         ]
-      ), { timing: 3000 })
+      ), { timing: 3000 });
+
+      this.post("/skills", (_, request) => {
+        const body = JSON.parse(request.requestBody);
+        return {...body}
+      }, { timing: 3000 });
+
+      this.post("/educations", (_, request) => {
+        const body = JSON.parse(request.requestBody);
+        return {...body}
+      }, { timing: 3000 });
     },
   });
   return server

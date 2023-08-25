@@ -43,6 +43,7 @@ import Address from '../../components/Address';
 import Feedback from '../../components/Feedback';
 import Skills from '../../components/Skills';
 import SkillsForm from '../../components/Skills/SkillsForm';
+import TimelineForm from '../../components/Timeline/TimelineForm';
 
 type AsyncDispatch = ThunkDispatch<RootState, {}, AnyAction>;
 
@@ -96,6 +97,7 @@ export default function AdminPage() {
             />
           }
         >
+          {isTimelineFormOpen && <TimelineForm />}
           <TimeLine data={timelineData} />
         </Box>
         <Box title={EXPERTISE_BOX_PROPS.title} id={EXPERTISE_BOX_PROPS.id}>
