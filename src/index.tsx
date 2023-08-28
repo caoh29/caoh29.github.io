@@ -10,7 +10,7 @@ import store from './store/store';
 
 import PrivateRoutes from './utils/helpers/PrivateRoutes';
 
-import { makeServer } from './services/server';
+// import { makeServer } from './services/server';
 
 import HomePage from './pages/Home/HomePage';
 import InnerPage from './pages/Inner/InnerPage';
@@ -18,7 +18,7 @@ import ErrorPage from './pages/Error/ErrorPage';
 import AdminPage from './pages/Admin/AdminPage';
 import LoginPage from './pages/Login/LoginPage';
 
-makeServer();
+// makeServer();
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
