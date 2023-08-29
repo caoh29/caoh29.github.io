@@ -1,0 +1,48 @@
+@use '../abstracts/colors';
+@use '../abstracts/variables';
+
+.about-form {
+  border-color: colors.$primary;
+  border-radius: 5px;
+  border-style: solid;
+  margin-bottom: 40px;
+  padding: 20px 15px;
+  text-align: left;
+
+  .form {
+    font-weight: variables.$regularTextWeight;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+
+    & > .button {
+      width: 150px;
+    }
+
+    .form-element {
+      display: flex;
+      flex-direction: column;
+      color: colors.$error;
+      gap: 10px;
+
+      .form-line {
+        display: grid;
+        grid-template-columns: 200px 500px;
+        align-items: center;
+        justify-content: left;
+        color: colors.$secondary;
+
+        textarea {
+          padding: 10px;
+          border-color: colors.$ternary;
+          border-radius: 5px;
+          border-style: solid;
+          color: colors.$secondary
+        }
+      }
+    }
+  }
+}

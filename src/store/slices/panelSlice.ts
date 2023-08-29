@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-interface PanelState {
+export interface PanelState {
   isOpen: boolean;
 }
 

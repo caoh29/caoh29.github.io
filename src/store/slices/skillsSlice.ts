@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { SkillsProps } from '../../types';
 
-interface SkillsState {
+export interface SkillsState {
   data: SkillsProps[];
   isLoading: boolean;
   error: string | null;

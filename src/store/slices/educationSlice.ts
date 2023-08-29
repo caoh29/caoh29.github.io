@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { TimeLineProps } from '../../types';
 
-interface EducationState {
+export interface EducationState {
   content: TimeLineProps[];
   isLoading: boolean;
   error: string | null;
