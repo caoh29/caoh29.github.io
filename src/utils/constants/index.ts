@@ -1,11 +1,11 @@
 import { faUser, faGraduationCap, faPen, faGem, faSuitcase, faLocationArrow, faComment, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faXTwitter, faFacebookF, faSkype } from '@fortawesome/free-brands-svg-icons';
+import { faXTwitter, faFacebookF, faInstagram, faLinkedin, faGithub, faSkype } from '@fortawesome/free-brands-svg-icons';
 
 import avatarImage from '../../assets/images/avatar.jpg';
 import ladder from '../../assets/images/ladder.png';
 import loupe from '../../assets/images/loupe.png';
 
-import { PhotoBoxProps, BoxProps, TimeLineProps, ExpertiseProps, FeedbackProps } from '../../types';
+import { PhotoBoxProps, BoxProps, TimeLineProps, ExpertiseProps, FeedbackProps, SkillsProps } from '../../types';
 
 // PHOTO BOX
 export const PHOTO_BOX_PROPS: PhotoBoxProps = {
@@ -21,7 +21,7 @@ export const ABOUT_BOX_PROPS: BoxProps = {
   title: 'About me',
   id: 'about',
   content:
-    'Respectful and responsible person,with remarkable academic and social performance, good knowledge in the computer area, excellent communication in English and Spanish. Characterized by teamwork, critical thinking and the ability to adapt to different situations.',
+    'Distinguished as a conscientious and accountable individual, demonstrating outstanding academic and interpersonal aptitude. Possesses a strong proficiency in the field of computer science, coupled with exceptional communication skills in both English and Spanish. Recognized for fostering collaborative work environments, adept problem-solving through critical thinking, and a proven ability to adapt effectively to diverse situations.',
 };
 
 // TIMELINE
@@ -84,21 +84,42 @@ export const EXPERTISE_PROPS: ExpertiseProps = {
         `
       }
     },
-    {
-      date: 'Oct 2022 - Dec 2022', 
-      info: {
-        company: 'Falcon',
-        job: 'Quality Engineer',
-        description: `
-        • Preparation of inspection reports
-        • NDT testing of oil cranes and rigs
-        • Tool calibration
-        • File maintenance and SGSS
-        `
-      }
-    },
+    // {
+    //   date: 'Oct 2022 - Dec 2022', 
+    //   info: {
+    //     company: 'Falcon',
+    //     job: 'Quality Engineer',
+    //     description: `
+    //     • Preparation of inspection reports
+    //     • NDT testing of oil cranes and rigs
+    //     • Tool calibration
+    //     • File maintenance and SGSS
+    //     `
+    //   }
+    // },
   ]
 };
+
+// SKILLS
+export const SKILLS_BOX_PROPS: BoxProps = {
+  title: 'Skills',
+  id: 'skills',
+};
+
+export const SKILLS_PROPS: SkillsProps[] = [
+  {
+    range: 70,
+    name: 'React',
+  },
+  {
+    range: 60,
+    name: 'JavaScript',
+  },
+  {
+    range: 30,
+    name: 'SASS',
+  },
+];
 
 // PORTFOLIO
 export const PORTFOLIO_BOX_PROPS: BoxProps = {
@@ -161,8 +182,8 @@ export const ADDRESS_BOX_PROPS: BoxProps = {
 export const ADDRESS_LINES = [
   {
     title: '',
-    href: 'tel:+57 316 578 6800',
-    content: '+57 316 578 6800',
+    href: 'tel:+1 437 663 9348',
+    content: '+1 437 663 9348',
     icon: faPhone,
   },
   {
@@ -182,6 +203,24 @@ export const ADDRESS_LINES = [
     href: 'https://www.facebook.com/camilo.ordonez.39/',
     content: 'camilo.ordonez.39',
     icon: faFacebookF,
+  },
+  {
+    title: 'Instagram',
+    href: 'https://www.instagram.com/camiloordonez39/',
+    content: 'camiloordonez.39',
+    icon: faInstagram,
+  },
+  {
+    title: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/camilo-ordo%C3%B1ez-herrera-04a47511b/',
+    content: 'Camilo Ordonez Herrera',
+    icon: faLinkedin,
+  },
+  {
+    title: 'GitHub',
+    href: 'https://github.com/caoh29',
+    content: 'caoh29',
+    icon: faGithub,
   },
   {
     title: 'Skype',
@@ -242,24 +281,24 @@ export const NAVIGATION_DIRECTORY = [
     link: '#experience',
     content: 'Experience',
   },
-  {
-    icon: faGem,
-    link: '#skills',
-    content: 'Skills',
-  },
-  {
-    icon: faSuitcase,
-    link: '#portfolio',
-    content: 'Portfolio',
-  },
+  // {
+  //   icon: faGem,
+  //   link: '#skills',
+  //   content: 'Skills',
+  // },
+  // {
+  //   icon: faSuitcase,
+  //   link: '#portfolio',
+  //   content: 'Portfolio',
+  // },
   {
     icon: faLocationArrow,
     link: '#contact',
     content: 'Contacts',
   },
-  {
-    icon: faComment,
-    link: '#feedback',
-    content: 'Feedbacks',
-  },
+  // {
+  //   icon: faComment,
+  //   link: '#feedback',
+  //   content: 'Feedbacks',
+  // },
 ];

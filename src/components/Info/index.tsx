@@ -4,8 +4,8 @@ export default function Info({ text, children }: InfoProps) {
   return (
     <div className="info">
       {children}
-      {text.split('\n').map((line) => (
-        <p>{line}</p>
+      {text.split('\n').map((line, index) => (
+        <p key={index}>{line}</p>
       ))}
     </div>
   );

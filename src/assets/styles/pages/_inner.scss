@@ -7,6 +7,10 @@
 
   .content {
     margin-right: 10px;
+
+    & > #contact {
+      margin-bottom: 150px;
+    }
   }
 
   & > .button {

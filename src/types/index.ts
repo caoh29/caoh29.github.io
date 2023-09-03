@@ -3,6 +3,8 @@ import { ReactNode } from 'react';
 export interface ButtonProps {
   text?: string;
   icon?: ReactNode;
+  disabled?: boolean;
+  type?: 'submit' | 'reset' | 'button';
   onClick?: () => void;
 }
 
@@ -16,6 +18,7 @@ export interface PhotoBoxProps {
 export interface BoxProps {
   title: string;
   content?: string;
+  button?: ReactNode;
   id: string;
   children?: ReactNode;
 }
@@ -60,3 +63,10 @@ export interface FeedbackProps {
     };
   }[];
 }
+
+export interface SkillsProps {
+  range: RangeValues | null;
+  name: string;
+}
+
+type RangeValues = 10 | 20 | 30 | 40 | 50 | 60 | 70 | 80 | 90 | 100;
