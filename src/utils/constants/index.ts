@@ -180,8 +180,8 @@ export const ADDRESS_BOX_PROPS: BoxProps = {
 export const ADDRESS_LINES = [
   {
     title: '',
-    href: 'tel:+57 316 578 6800',
-    content: '+57 316 578 6800',
+    href: 'tel:+1 437 663 9348',
+    content: '+1 437 663 9348',
     icon: faPhone,
   },
   {
