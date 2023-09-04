@@ -34,7 +34,7 @@ export const TIMELINE_PROPS: TimeLineProps = {
   data: [
     {
       date: 2023,
-      title: 'Computer Programming Diploma',
+      title: 'Computer Programming Diploma - ON GOING',
       text: 'Georgian College @ ILAC, Toronto, Canada',
     },
     {
