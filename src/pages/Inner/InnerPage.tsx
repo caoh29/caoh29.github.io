@@ -12,6 +12,8 @@ import {
   TIMELINE_PROPS,
   EXPERTISE_PROPS,
   ADDRESS_BOX_PROPS,
+  SKILLS_BOX_PROPS,
+  SKILLS_PROPS,
   // FEEDBACK_BOX_PROPS,
   // FEEDBACK_PROPS,
 } from '../../utils/constants';
@@ -25,6 +27,7 @@ import TimeLine from '../../components/Timeline';
 import Expertise from '../../components/Expertise';
 // import Portfolio from '../../components/Portfolio';
 import Address from '../../components/Address';
+import Skills from '../../components/Skills';
 // import Feedback from '../../components/Feedback';
 
 const BUTTON_PROPS: ButtonProps = {
@@ -57,6 +60,9 @@ export default function InnerPage() {
         </Box>
         <Box title={EXPERTISE_BOX_PROPS.title} id={EXPERTISE_BOX_PROPS.id}>
           <Expertise data={EXPERTISE_PROPS.data} />
+        </Box>
+        <Box title={SKILLS_BOX_PROPS.title} id={SKILLS_BOX_PROPS.id}>
+          <Skills data={SKILLS_PROPS} />
         </Box>
         {/* <Box title={PORTFOLIO_BOX_PROPS.title} id={PORTFOLIO_BOX_PROPS.id}>
           <Portfolio />

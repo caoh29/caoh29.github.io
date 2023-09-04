@@ -108,16 +108,56 @@ export const SKILLS_BOX_PROPS: BoxProps = {
 
 export const SKILLS_PROPS: SkillsProps[] = [
   {
-    range: 70,
-    name: 'React',
+    range: 80,
+    name: 'HTML',
   },
   {
-    range: 60,
-    name: 'JavaScript',
+    range: 70,
+    name: 'CSS',
   },
   {
     range: 30,
     name: 'SASS',
+  },
+  {
+    range: 70,
+    name: 'JavaScript',
+  },
+  {
+    range: 50,
+    name: 'TypeScript',
+  },
+  {
+    range: 70,
+    name: 'React',
+  },
+  {
+    range: 50,
+    name: 'Next.js',
+  },
+  {
+    range: 20,
+    name: 'Jest',
+  },
+  {
+    range: 30,
+    name: 'React Testing Library',
+  },
+  {
+    range: 40,
+    name: 'Node.js (express)',
+  },
+  {
+    range: 20,
+    name: 'PostgreSQL',
+  },
+  {
+    range: 40,
+    name: 'MongoDB',
+  },
+  {
+    range: 50,
+    name: 'AWS',
   },
 ];
 
@@ -281,11 +321,11 @@ export const NAVIGATION_DIRECTORY = [
     link: '#experience',
     content: 'Experience',
   },
-  // {
-  //   icon: faGem,
-  //   link: '#skills',
-  //   content: 'Skills',
-  // },
+  {
+    icon: faGem,
+    link: '#skills',
+    content: 'Skills',
+  },
   // {
   //   icon: faSuitcase,
   //   link: '#portfolio',
