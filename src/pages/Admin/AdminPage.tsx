@@ -32,6 +32,7 @@ import {
   fetchSkillsData,
   toggleSkillsForm,
 } from '../../store/slices/skillsSlice';
+import { fetchAboutData, toggleAboutForm } from '../../store/slices/aboutSlice';
 
 import Button from '../../components/Button';
 import Panel from '../../components/Panel';
@@ -59,6 +60,7 @@ export default function AdminPage() {
     state.educationReducer;
   const { data: skillsData, isFormOpen: isSkillsFormOpen } =
     state.skillsReducer;
+  const { text: aboutData, isFormOpen: isAboutFormOpen } = state.aboutReducer;
 
   useEffect(() => {
     navHighlighter();
@@ -71,6 +73,7 @@ export default function AdminPage() {
   useEffect(() => {
     dispatch(fetchTimelineData('http://localhost:4000/api/educations'));
     dispatch(fetchSkillsData('http://localhost:4000/api/skills'));
+    dispatch(fetchAboutData('http://localhost:4000/api/about'));
   }, [dispatch]);
 
   return (
@@ -83,9 +86,18 @@ export default function AdminPage() {
       <div className="content">
         <Box
           title={ABOUT_BOX_PROPS.title}
-          content={ABOUT_BOX_PROPS.content}
+          content={aboutData[0].content}
           id={ABOUT_BOX_PROPS.id}
-        />
+          button={
+            <Button
+              text="Open edit"
+              icon={<FontAwesomeIcon icon={faPenToSquare} />}
+              onClick={() => dispatch(toggleAboutForm())}
+            />
+          }
+        >
+          {isAboutFormOpen && <TimelineForm />}
+        </Box>
         <Box
           title={TIMELINE_BOX_PROPS.title}
           id={TIMELINE_BOX_PROPS.id}

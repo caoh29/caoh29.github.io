@@ -30,6 +30,7 @@ import { RootState } from '../../store/store';
 import { togglePanel } from '../../store/slices/panelSlice';
 import { fetchTimelineData } from '../../store/slices/educationSlice';
 import { fetchSkillsData } from '../../store/slices/skillsSlice';
+import { fetchAboutData } from '../../store/slices/aboutSlice';
 
 import Button from '../../components/Button';
 import Panel from '../../components/Panel';
@@ -58,6 +59,7 @@ export default function InnerPage() {
   const isOpen = state.panelReducer.isOpen;
   const timelineData = state.educationReducer.content;
   const skillsData = state.skillsReducer.data;
+  const aboutData = state.aboutReducer.text[0].content;
 
   useEffect(() => {
     navHighlighter();
@@ -70,6 +72,7 @@ export default function InnerPage() {
   useEffect(() => {
     dispatch(fetchTimelineData('http://localhost:4000/api/educations'));
     dispatch(fetchSkillsData('http://localhost:4000/api/skills'));
+    dispatch(fetchAboutData('http://localhost:4000/api/about'));
   }, [dispatch]);
 
   return (
@@ -82,7 +85,7 @@ export default function InnerPage() {
       <div className="content">
         <Box
           title={ABOUT_BOX_PROPS.title}
-          content={ABOUT_BOX_PROPS.content}
+          content={aboutData}
           id={ABOUT_BOX_PROPS.id}
         />
         <Box title={TIMELINE_BOX_PROPS.title} id={TIMELINE_BOX_PROPS.id}>

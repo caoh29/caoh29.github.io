@@ -28,6 +28,10 @@ export interface InfoProps {
   children?: ReactNode;
 }
 
+export interface AboutProps {
+  content: string;
+}
+
 export interface TimeLineProps {
   date: number;
   title: string;
