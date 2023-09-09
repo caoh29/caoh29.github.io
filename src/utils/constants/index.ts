@@ -21,7 +21,7 @@ export const ABOUT_BOX_PROPS: BoxProps = {
   title: 'About me',
   id: 'about',
   content:
-    'Distinguished as a conscientious and accountable individual, demonstrating outstanding academic and interpersonal aptitude. Possesses a strong proficiency in the field of computer science, coupled with exceptional communication skills in both English and Spanish. Recognized for fostering collaborative work environments, adept problem-solving through critical thinking, and a proven ability to adapt effectively to diverse situations.',
+    'Respectful self-motivator hardworking and passionate job seeker with strong organizational skills eager to secure entry-level software developer position. Problem-solving through critical thinking, and a proven ability to adapt effectively to diverse situations. Ready to help team achieve company goals. Fluent in English and Spanish and accustomed to working with cross-cultural, global teams. . Recognized for fostering collaborative work environments, adept problem-solving through critical thinking, and a proven ability to adapt effectively to diverse situations.',
 };
 
 // TIMELINE
@@ -42,7 +42,10 @@ export const TIMELINE_PROPS: TimeLineProps = {
       title: 'Bachelor in Mechanical Engineering',
       text: `
         Universidad Industrial de Santander, Bucaramanga, Colombia 
-        My thesis consisted of the creation of a Digital Learning Object based on Numerical Methods using eXe Learning under IEEE's compliance standards
+        Honour Roll, II Semester, 2019
+        Thesis Paper: Competency-based learning design and realization of a learning object for the numerical methods course
+        As part of my thesis project, I spearheaded the creation of a Digital Learning Object focused on Numerical Methods, meticulously developed in adherence to IEEE's exacting compliance standards using eXe Learning. This initiative was undertaken in response to a critical need within the university's academic landscape. At the time, there was an absence of a well-defined course structure for students, coupled with a scarcity of learning resources. Moreover, there existed no platform for effective communication between instructors and students.
+        Recognizing these challenges, our team took the initiative to design a structured learning plan for students. This comprehensive plan not only facilitated effective learning but also addressed the dearth of available resources. Additionally, we developed a dedicated module that seamlessly integrated with the university's Moodle platform. This module provided an essential communication channel, enabling instructors to engage with the class and enhance the overall learning experience.
       `,
     },
     {
@@ -67,8 +70,10 @@ export const EXPERTISE_PROPS: ExpertiseProps = {
         company: 'EPAM',
         job: 'Junior Software Engineer',
         description: `
-        • Design and deployment of UIs using React, Redux, React Router, TypeScript, JavaScript, SASS, Styled Components, Axios, Formik\n
-        • Unit and Integration testing of UIs using Jest and React Testing Library
+        • Contributed ideas and suggestions in team meetings and deliveredupdates on deadlines, designs, and enhancements.\n
+        • Collaborated with fellow engineers to evaluate software interfaces.\n
+        • Analyzed code defects and failures and presented code refactors anddesign fixes.\n
+        • Design and deployment of highly interactive user interfaces (UIs)utilizing a cutting-edge tech stack that included React, Redux, ReactRouter, TypeScript, JavaScript, SASS, Styled Components, Axios, andFormik, resulting in intuitive and visually appealing.\n
         `
       }
     },
@@ -78,9 +83,10 @@ export const EXPERTISE_PROPS: ExpertiseProps = {
         company: 'Deloitte',
         job: 'Cloud Engineer Consultant',
         description: `
-        • Automated testing of regression tests using Tricentis TOSCA
-        • Design and management of AWS cloud infrastructure using EC2, ELB, Lambda, API Gateway, DynamoDB and Cognito
-        • Migration of database objects using DMS for RDS
+        • Contributed to the automation of regression testing procedures byleveraging Tricentis TOSCA, resulting in increased efficiency andaccuracy in QA processes.\n
+        • Proficient design and management of AWS cloud infrastructure,encompassing vital services such as EC2, ELB, Lambda, API Gateway,DynamoDB and Cognito, ensuring optimal system performance andscalability.\n
+        • Performed the migration of critical database objects, using AWSDatabase Migration Service (DMS) to facilitate a smooth transition toRDS, ensuring data integrity and minimal disruption to businessoperations.\n
+        • Finalized project plans and obtained approval from clients.\n
         `
       }
     },
