@@ -147,11 +147,11 @@ export const SKILLS_PROPS: SkillsProps[] = [
   },
   {
     range: 30,
-    name: 'React Testing Library',
+    name: 'RTL',
   },
   {
     range: 40,
-    name: 'Node.js (express)',
+    name: 'Node.js',
   },
   {
     range: 20,
