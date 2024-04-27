@@ -264,7 +264,7 @@ export const ADDRESS_LINES = [
   },
   {
     title: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/camilo-ordo%C3%B1ez-herrera-04a47511b/',
+    href: 'https://www.linkedin.com/in/camilo-ordonez-herrera-04a47511b/',
     content: 'Camilo Ordonez Herrera',
     icon: faLinkedin,
   },
