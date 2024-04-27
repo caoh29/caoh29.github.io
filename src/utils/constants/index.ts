@@ -21,7 +21,7 @@ export const ABOUT_BOX_PROPS: BoxProps = {
   title: 'About me',
   id: 'about',
   content:
-    'Respectful self-motivator hardworking and passionate job seeker with strong organizational skills eager to secure entry-level software developer position. Problem-solving through critical thinking, and a proven ability to adapt effectively to diverse situations. Ready to help team achieve company goals. Fluent in English and Spanish and accustomed to working with cross-cultural, global teams. . Recognized for fostering collaborative work environments, adept problem-solving through critical thinking, and a proven ability to adapt effectively to diverse situations.',
+    'Hardworking and passionate Junior Software Engineer with experience contributing to design, development and optimization of User Interfaces (UIs) for web applications. Problem-solver through critical thinking. Proven ability to adapt effectively to diverse situations. Brings good understanding of TypeScript, JavaScript and Python. Driven to innovate and learn.',
 };
 
 // TIMELINE
@@ -35,11 +35,11 @@ export const TIMELINE_PROPS: TimeLineProps = {
     {
       date: 2023,
       title: 'Computer Programming Diploma - ONGOING',
-      text: 'Georgian College @ ILAC, Toronto, Canada',
+      text: 'Georgian College, Toronto, Canada',
     },
     {
       date: 2021,
-      title: 'Bachelor in Mechanical Engineering',
+      title: 'Bachelor of Engineering in Mechanical Engineering',
       text: `
         Universidad Industrial de Santander, Bucaramanga, Colombia 
         Honour Roll, II Semester, 2019
@@ -65,15 +65,24 @@ export const EXPERTISE_BOX_PROPS: BoxProps = {
 export const EXPERTISE_PROPS: ExpertiseProps = {
   data: [
     {
-      date: 'Jul 2023 - Aug 2023', 
+      date: 'Jan 2024 - Present', 
+      info: {
+        company: 'LEAF',
+        job: 'Volunteer Software Developer',
+        description: `
+        • Led the development of a new website for an environmental organization using Next.js (React & Node.js) and Supabase (backend-as-a-service). This platform streamlines the certification process for food industry establishments and suppliers by replacing manual evaluation process with an integrated platform.\n
+        • Designed and implemented a relational database (PostgreSQL) hosted on Supabase to replace manual evaluation management. This revamped system facilitates efficient data storage and retrieval for the website's certification process.\n
+        `
+      }
+    },
+    {
+      date: 'Jul 2023 - Sept 2023', 
       info: {
         company: 'EPAM',
         job: 'Junior Software Engineer',
         description: `
-        • Contributed ideas and suggestions in team meetings and deliveredupdates on deadlines, designs, and enhancements.\n
-        • Collaborated with fellow engineers to evaluate software interfaces.\n
-        • Analyzed code defects and failures and presented code refactors anddesign fixes.\n
-        • Design and deployment of highly interactive user interfaces (UIs)utilizing a cutting-edge tech stack that included React, Redux, ReactRouter, TypeScript, JavaScript, SASS, Styled Components, Axios, andFormik, resulting in intuitive and visually appealing.\n
+        • Worked on a library of reusable UI components for using React.js, TypeScript, and CSS. This component library facilitated consistent design of future development across the company.\n
+        • Demonstrated strong communication skills by actively contributing in team meetings, providing updates on deadlines, designs, and enhancements, and preparing detailed technical documentation for future reference.\n
         `
       }
     },
@@ -83,10 +92,9 @@ export const EXPERTISE_PROPS: ExpertiseProps = {
         company: 'Deloitte',
         job: 'Cloud Engineer Consultant',
         description: `
-        • Contributed to the automation of regression testing procedures byleveraging Tricentis TOSCA, resulting in increased efficiency andaccuracy in QA processes.\n
-        • Proficient design and management of AWS cloud infrastructure,encompassing vital services such as EC2, ELB, Lambda, API Gateway,DynamoDB and Cognito, ensuring optimal system performance andscalability.\n
-        • Performed the migration of critical database objects, using AWSDatabase Migration Service (DMS) to facilitate a smooth transition toRDS, ensuring data integrity and minimal disruption to businessoperations.\n
-        • Finalized project plans and obtained approval from clients.\n
+        • Developed an internal new-hire onboarding portal using React.js, Node.js, PostgreSQL and AWS. This platform provides centralized access to onboarding information for new hires and progress tracking tools for managers, reducing the onboarding process time and errors.\n
+        • Collaborated with developers to automate regression testing for a financial institution's internal customer applications using Tricentis TOSCA resulting in a more efficient QA process. Additionally, by creating reusable test suites, we reduced regression testing time for functionalities with similar steps.\n
+        • Migrated critical database objects from Microsoft SQL Server (MSSQL) to Amazon RDS for PostgreSQL using AWS Database Migration Service (DMS), ensuring data integrity and minimal downtime for business operations.\n
         `
       }
     },
@@ -114,7 +122,7 @@ export const SKILLS_BOX_PROPS: BoxProps = {
 
 export const SKILLS_PROPS: SkillsProps[] = [
   {
-    range: 80,
+    range: 90,
     name: 'HTML',
   },
   {
@@ -122,47 +130,51 @@ export const SKILLS_PROPS: SkillsProps[] = [
     name: 'CSS',
   },
   {
-    range: 30,
-    name: 'SASS',
-  },
-  {
-    range: 70,
+    range: 80,
     name: 'JavaScript',
   },
   {
-    range: 50,
+    range: 60,
     name: 'TypeScript',
   },
   {
-    range: 70,
-    name: 'React',
+    range: 80,
+    name: 'React.js',
   },
   {
-    range: 50,
+    range: 70,
     name: 'Next.js',
   },
   {
-    range: 20,
+    range: 50,
     name: 'Jest',
   },
   {
-    range: 30,
+    range: 50,
     name: 'RTL',
   },
   {
-    range: 40,
+    range: 70,
     name: 'Node.js',
   },
   {
-    range: 20,
+    range: 50,
+    name: 'Nest.js',
+  },
+  {
+    range: 70,
+    name: 'MySQL',
+  },
+  {
+    range: 80,
     name: 'PostgreSQL',
   },
   {
-    range: 40,
+    range: 80,
     name: 'MongoDB',
   },
   {
-    range: 50,
+    range: 70,
     name: 'AWS',
   },
 ];
@@ -245,12 +257,6 @@ export const ADDRESS_LINES = [
     icon: faXTwitter,
   },
   {
-    title: 'Facebook',
-    href: 'https://www.facebook.com/camilo.ordonez.39/',
-    content: 'camilo.ordonez.39',
-    icon: faFacebookF,
-  },
-  {
     title: 'Instagram',
     href: 'https://www.instagram.com/camiloordonez39/',
     content: 'camiloordonez.39',
@@ -267,12 +273,6 @@ export const ADDRESS_LINES = [
     href: 'https://github.com/caoh29',
     content: 'caoh29',
     icon: faGithub,
-  },
-  {
-    title: 'Skype',
-    href: 'https://join.skype.com/invite/k5bvFMtwY2mA',
-    content: 'cronox20',
-    icon: faSkype,
   },
 ];
 
