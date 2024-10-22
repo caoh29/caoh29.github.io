@@ -8,7 +8,7 @@ import {
   ABOUT_BOX_PROPS,
   TIMELINE_BOX_PROPS,
   EXPERTISE_BOX_PROPS,
-  // PORTFOLIO_BOX_PROPS,
+  PORTFOLIO_BOX_PROPS,
   TIMELINE_PROPS,
   EXPERTISE_PROPS,
   ADDRESS_BOX_PROPS,
@@ -25,7 +25,7 @@ import Panel from '../../components/Panel';
 import Box from '../../components/Box';
 import TimeLine from '../../components/Timeline';
 import Expertise from '../../components/Expertise';
-// import Portfolio from '../../components/Portfolio';
+import Portfolio from '../../components/Portfolio';
 import Address from '../../components/Address';
 import Skills from '../../components/Skills';
 // import Feedback from '../../components/Feedback';
@@ -64,9 +64,9 @@ export default function InnerPage() {
         <Box title={SKILLS_BOX_PROPS.title} id={SKILLS_BOX_PROPS.id}>
           <Skills data={SKILLS_PROPS} />
         </Box>
-        {/* <Box title={PORTFOLIO_BOX_PROPS.title} id={PORTFOLIO_BOX_PROPS.id}>
+        <Box title={PORTFOLIO_BOX_PROPS.title} id={PORTFOLIO_BOX_PROPS.id}>
           <Portfolio />
-        </Box> */}
+        </Box>
         <Box title={ADDRESS_BOX_PROPS.title} id={ADDRESS_BOX_PROPS.id}>
           <Address />
         </Box>

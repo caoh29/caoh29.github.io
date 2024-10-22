@@ -1,9 +1,18 @@
 import { faUser, faGraduationCap, faPen, faGem, faSuitcase, faLocationArrow, faComment, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faXTwitter, faFacebookF, faInstagram, faLinkedin, faGithub, faSkype } from '@fortawesome/free-brands-svg-icons';
+import { faXTwitter, faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import avatarImage from '../../assets/images/avatar.jpg';
-import ladder from '../../assets/images/ladder.png';
-import loupe from '../../assets/images/loupe.png';
+// import ladder from '../../assets/images/ladder.png';
+// import loupe from '../../assets/images/loupe.png';
+import code from '../../assets/images/code.png';
+import petShop from '../../assets/images/petShop.png';
+import discoveryMenu from '../../assets/images/discoveryMenu.png';
+import smoothieShop from '../../assets/images/smoothieShop.png';
+import gallery from '../../assets/images/gallery.png';
+import shoesShop from '../../assets/images/shoesShop.png';
+import candyShop from '../../assets/images/candyShop.png';
+import emporiumHorses from '../../assets/images/emporiumHorses.png';
+import pokemon from '../../assets/images/pokemon.png';
 
 import { PhotoBoxProps, BoxProps, TimeLineProps, ExpertiseProps, FeedbackProps, SkillsProps } from '../../types';
 
@@ -12,7 +21,7 @@ export const PHOTO_BOX_PROPS: PhotoBoxProps = {
   name: 'Camilo Ordonez',
   title: 'Mechanical Engineer and Frontend developer',
   description:
-    'I have a passion for building things. I enjoy solving problems, with and without code',
+    'I have a passion for building things. I enjoy solving problems with and without code',
   avatar: avatarImage,
 };
 
@@ -21,7 +30,7 @@ export const ABOUT_BOX_PROPS: BoxProps = {
   title: 'About me',
   id: 'about',
   content:
-    'Hardworking and passionate Junior Software Engineer with experience contributing to design, development and optimization of User Interfaces (UIs) for web applications. Problem-solver through critical thinking. Proven ability to adapt effectively to diverse situations. Brings good understanding of TypeScript, JavaScript and Python. Driven to innovate and learn.',
+    'Software developer with a unique blend of technical and engineering expertise, specializing in full-stack development and cloud solutions. Experienced in building robust web applications using React.js, TypeScript, and Node.js, while leveraging cloud technologies like AWS. My background spans from developing user interfaces and component libraries to implementing database solutions and automation tools. Previously contributed to quality engineering in the petroleum industry, bringing a detail-oriented approach to software development. Demonstrated ability to adapt across industries and technologies, from mechanical engineering to modern software development, with a strong focus on creating efficient, user-centered solutions.',
 };
 
 // TIMELINE
@@ -44,8 +53,8 @@ export const TIMELINE_PROPS: TimeLineProps = {
         Universidad Industrial de Santander, Bucaramanga, Colombia 
         Honour Roll, II Semester, 2019
         Thesis Paper: Competency-based learning design and realization of a learning object for the numerical methods course
-        As part of my thesis project, I spearheaded the creation of a Digital Learning Object focused on Numerical Methods, meticulously developed in adherence to IEEE's exacting compliance standards using eXe Learning. This initiative was undertaken in response to a critical need within the university's academic landscape. At the time, there was an absence of a well-defined course structure for students, coupled with a scarcity of learning resources. Moreover, there existed no platform for effective communication between instructors and students.
-        Recognizing these challenges, our team took the initiative to design a structured learning plan for students. This comprehensive plan not only facilitated effective learning but also addressed the dearth of available resources. Additionally, we developed a dedicated module that seamlessly integrated with the university's Moodle platform. This module provided an essential communication channel, enabling instructors to engage with the class and enhance the overall learning experience.
+        As part of my thesis project, My thesis partner and I developed a Digital Learning Object focused on Numerical Methods in adherence to IEEE's compliance standards by using eXe Learning tool. This initiative was undertaken in response to a critical need within the university's academic landscape. At the time, there was an absence of a well-defined course structure for students, coupled with a scarcity of learning resources. Moreover, there existed no platform for effective communication between instructors and students.
+        Recognizing these challenges, we took the initiative to design a structured learning plan for students. This comprehensive plan not only facilitated effective learning but also addressed the shortage of available resources. Additionally, we developed a dedicated module that seamlessly integrated with the university's Moodle platform. This module provided an essential communication channel, enabling instructors to engage with the class and enhance the overall learning experience.
       `,
     },
     {
@@ -65,52 +74,64 @@ export const EXPERTISE_BOX_PROPS: BoxProps = {
 export const EXPERTISE_PROPS: ExpertiseProps = {
   data: [
     {
-      date: 'Jan 2024 - Present', 
+      date: 'Jan 2024 - Jul 2024',
       info: {
         company: 'LEAF',
         job: 'Volunteer Software Developer',
         description: `
-        • Led the development of a new website for an environmental organization using Next.js (React & Node.js) and Supabase (backend-as-a-service). This platform streamlines the certification process for food industry establishments and suppliers by replacing manual evaluation process with an integrated platform.\n
-        • Designed and implemented a relational database (PostgreSQL) hosted on Supabase to replace manual evaluation management. This revamped system facilitates efficient data storage and retrieval for the website's certification process.\n
+        • Designed and implemented a relational database using PostgreSQL on Supabase.\n
+        • Collaborated with team members to consolidate data from various sources into a centralized database.\n
         `
       }
     },
     {
-      date: 'Jul 2023 - Sept 2023', 
+      date: 'Jul 2023 - Sept 2023',
       info: {
         company: 'EPAM',
         job: 'Junior Software Engineer',
         description: `
-        • Worked on a library of reusable UI components for using React.js, TypeScript, and CSS. This component library facilitated consistent design of future development across the company.\n
-        • Demonstrated strong communication skills by actively contributing in team meetings, providing updates on deadlines, designs, and enhancements, and preparing detailed technical documentation for future reference.\n
+        • Assisted with the development team to build and deploy various UI components for a financial firm.\n
+        • Developed a component library of reusable UI components using React, TypeScript, and CSS.\n
+        • Conducted testing and debugging of components utilizing Playwright for integration testing and Jest/RTL for unit testing.\n
         `
       }
     },
     {
-      date: 'Feb 2022 - Jun 2023', 
+      date: 'Feb 2022 - Jun 2023',
       info: {
         company: 'Deloitte',
         job: 'Cloud Engineer Consultant',
         description: `
         • Developed an internal new-hire onboarding portal using React.js, Node.js, PostgreSQL and AWS. This platform provides centralized access to onboarding information for new hires and progress tracking tools for managers, reducing the onboarding process time and errors.\n
-        • Collaborated with developers to automate regression testing for a financial institution's internal customer applications using Tricentis TOSCA resulting in a more efficient QA process. Additionally, by creating reusable test suites, we reduced regression testing time for functionalities with similar steps.\n
+        • Collaborated with developers to automate regression testing for a financial institution's internal applications using Tricentis TOSCA resulting in a more efficient QA process.\n
         • Migrated critical database objects from Microsoft SQL Server (MSSQL) to Amazon RDS for PostgreSQL using AWS Database Migration Service (DMS), ensuring data integrity and minimal downtime for business operations.\n
         `
       }
     },
-    // {
-    //   date: 'Oct 2022 - Dec 2022', 
-    //   info: {
-    //     company: 'Falcon',
-    //     job: 'Quality Engineer',
-    //     description: `
-    //     • Preparation of inspection reports
-    //     • NDT testing of oil cranes and rigs
-    //     • Tool calibration
-    //     • File maintenance and SGSS
-    //     `
-    //   }
-    // },
+    {
+      date: 'Oct 2022 - Dec 2022',
+      info: {
+        company: 'Falcon Rigs SAS',
+        job: 'Quality Engineer',
+        description: `
+        • Developed comprehensive inspection reports based on NDT assessments conducted on petroleum drilling equipment, ensuring detailed and accurate documentation of rig inspections.\n
+        • Managed a systematic tool calibration process, auditing company inventory for calibration validity. Recalibrated expired equipment in-house where possible, and coordinated with certified calibration institutes to renew certificates for other tools, ensuring compliance with industry standards.\n
+        • Maintained organized records and managed the System for Managing Information (SGSS), ensuring adherence to relevant norms and keeping all documentation up-to-date to comply with industry regulations.\n
+        `
+      }
+    },
+    {
+      date: 'Dec 2019 - Feb 2020',
+      info: {
+        company: 'Industrias LAVCO SAS',
+        job: 'Computer Aided Design Intern',
+        description: `
+        • Developed detailed mechanical drawings for motor liners using SolidWorks, ensuring precision and compliance with design specifications.\n
+        • Implemented a systematic reformatting process for existing drawings, enhancing clarity and accessibility of technical information.\n
+        • Applied reverse engineering techniques to analyze and recreate motor liner designs, facilitating the adaptation of legacy components to modern specifications.\n
+        `
+      }
+    },
   ]
 };
 
@@ -148,10 +169,6 @@ export const SKILLS_PROPS: SkillsProps[] = [
   {
     range: 50,
     name: 'Jest',
-  },
-  {
-    range: 50,
-    name: 'RTL',
   },
   {
     range: 70,
@@ -202,32 +219,100 @@ export const PORTFOLIO_CATEGORIES = [
 
 export const PORTFOLIO_PROJECTS = [
   {
-    className: 'ui',
-    name: 'First project',
-    description: 'some text',
-    image: loupe,
-    projectUrl: 'https://caoh29.github.io/'
+    className: 'ui code',
+    name: 'PetShop',
+    description: `E-commerce web app for pets using Nextjs.\n
+    https://github.com/caoh29/petshop`,
+    image: petShop,
+    projectUrl: 'https://github.com/caoh29/petshop'
   },
   {
     className: 'ui code',
-    name: 'Second project',
-    description: 'some text',
-    image: loupe,
-    projectUrl: 'https://caoh29.github.io/'
+    name: 'Discovery Menu',
+    description: `Recipe finder web app using Javascript.\n
+    https://github.com/caoh29/DiscoveryMenu`,
+    image: discoveryMenu,
+    projectUrl: 'https://caoh29.github.io/DiscoveryMenu/'
   },
   {
     className: 'code',
-    name: 'Third project',
-    description: 'some text',
-    image: ladder,
-    projectUrl: 'https://caoh29.github.io/'
+    name: 'Recipe Menu',
+    description: `Recipe finder desktop app using Java\n
+    https://github.com/caoh29/RecipeMenu`,
+    image: code,
+    projectUrl: 'https://github.com/caoh29/RecipeMenu'
+  },
+  {
+    className: 'ui',
+    name: 'Smoothie Shop',
+    description: `Smoothie shop web app form to make orders in Javascript.\n
+    https://github.com/caoh29/smoothie-shop`,
+    image: smoothieShop,
+    projectUrl: 'https://caoh29.github.io/smoothie-shop/'
+  },
+  {
+    className: 'ui',
+    name: 'Gallery',
+    description: `Image gallery web app in Javascript.\n
+    https://github.com/caoh29/gallery`,
+    image: gallery,
+    projectUrl: 'https://caoh29.github.io/gallery/'
+  },
+  {
+    className: 'ui',
+    name: 'Shoes Shop',
+    description: `Shoes store web skeleton in plain HTML and CSS.\n
+    https://github.com/caoh29/shoes-shop`,
+    image: shoesShop,
+    projectUrl: 'https://caoh29.github.io/shoes-shop/'
+  },
+  {
+    className: 'ui code',
+    name: 'Twitter Clone',
+    description: `Basic twitter clone web app using HTML,CSS and PHP.\n
+    https://github.com/caoh29/php-twitter`,
+    image: code,
+    projectUrl: 'https://github.com/caoh29/php-twitter'
+  },
+  {
+    className: 'ui',
+    name: 'Candy Shop',
+    description: `Candy shop web skeleton in plain HTML and CSS.\n
+    https://github.com/caoh29/candy-shop`,
+    image: candyShop,
+    projectUrl: 'https://caoh29.github.io/candy-shop/'
+  },
+  {
+    className: 'ui',
+    name: 'Emporium Horses',
+    description: `Luxury horses web skeleton in plain HTML and CSS.\n
+    https://github.com/caoh29/emporium-horses`,
+    image: emporiumHorses,
+    projectUrl: 'https://caoh29.github.io/emporium-horses/'
+  },
+  {
+    className: 'ui',
+    name: 'Pokemon Favorites',
+    description: `Pokemon favorites UI web app using Nextjs.\n
+    https://github.com/caoh29/Pokemon`,
+    image: pokemon,
+    projectUrl: 'https://github.com/caoh29/Pokemon'
   },
   {
     className: 'code',
-    name: 'Forth project',
-    description: 'some text',
-    image: ladder,
-    projectUrl: 'https://caoh29.github.io/'
+    name: 'Pokemon backend',
+    description: `Pokemon REST API using Nestjs.\n
+    https://github.com/caoh29/pokemon-backend`,
+    image: code,
+    projectUrl: 'https://github.com/caoh29/pokemon-backend'
+  },
+  {
+    className: 'code',
+    name: 'Car dealership backend',
+    description: `Car dealership REST API using Nestjs.\n
+    https://github.com/caoh29/nest-car-dealership`,
+    image: code,
+    projectUrl: 'https://github.com/caoh29/nest-car-dealership'
   },
 ];
 
