@@ -1,19 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.0d900969.css",
-    "main.js": "/static/js/main.788ff5d0.js",
+    "main.css": "/static/css/main.69e87839.css",
+    "main.js": "/static/js/main.75092807.js",
     "static/js/787.dbc30ae6.chunk.js": "/static/js/787.dbc30ae6.chunk.js",
     "static/media/background.png": "/static/media/background.db6eaaed660e171e431f.png",
+    "static/media/candyShop.png": "/static/media/candyShop.9a53829713402e3d6228.png",
+    "static/media/emporiumHorses.png": "/static/media/emporiumHorses.95ea9d1c5dc3e7810878.png",
     "static/media/avatar.jpg": "/static/media/avatar.9b40509e5f7c255363b5.jpg",
-    "static/media/ladder.png": "/static/media/ladder.c4b619603946b2d45402.png",
-    "static/media/loupe.png": "/static/media/loupe.eaa272b8721032d41327.png",
+    "static/media/discoveryMenu.png": "/static/media/discoveryMenu.05372a20af033d1aa267.png",
+    "static/media/gallery.png": "/static/media/gallery.091b32aa5e7f1115066b.png",
+    "static/media/petShop.png": "/static/media/petShop.8654e23f38f9d266c738.png",
+    "static/media/shoesShop.png": "/static/media/shoesShop.06c453003c56e6279fd3.png",
+    "static/media/pokemon.png": "/static/media/pokemon.a1b22d51eb5924781162.png",
+    "static/media/smoothieShop.png": "/static/media/smoothieShop.5ebf2d9da6266c2027b9.png",
     "index.html": "/index.html",
-    "main.0d900969.css.map": "/static/css/main.0d900969.css.map",
-    "main.788ff5d0.js.map": "/static/js/main.788ff5d0.js.map",
+    "main.69e87839.css.map": "/static/css/main.69e87839.css.map",
+    "main.75092807.js.map": "/static/js/main.75092807.js.map",
     "787.dbc30ae6.chunk.js.map": "/static/js/787.dbc30ae6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0d900969.css",
-    "static/js/main.788ff5d0.js"
+    "static/css/main.69e87839.css",
+    "static/js/main.75092807.js"
   ]
 }
