@@ -79,20 +79,21 @@ export const EXPERTISE_PROPS: ExpertiseProps = {
         company: 'LEAF',
         job: 'Volunteer Software Developer',
         description: `
-        • Designed and implemented a relational database using PostgreSQL on Supabase.\n
+        • Designed and implemented a relational database (PostgreSQL) to be hosted on Supabase.\n
         • Collaborated with team members to consolidate data from various sources into a centralized database.\n
+        • Documented database architecture, entity-relationship diagrams, and data migration processes to ensure clarity and maintainability for future development.\n
         `
       }
     },
     {
-      date: 'Jul 2023 - Sept 2023',
+      date: 'Jul 2023 - Aug 2023',
       info: {
         company: 'EPAM',
         job: 'Junior Software Engineer',
         description: `
-        • Assisted with the development team to build and deploy various UI components for a financial firm.\n
-        • Developed a component library of reusable UI components using React, TypeScript, and CSS.\n
-        • Conducted testing and debugging of components utilizing Playwright for integration testing and Jest/RTL for unit testing.\n
+        • Assisted to develop a fully flexible and reusable UI component library using HTML, CSS, TypeScript, and React.\n
+        • Conducted testing and debugging of components utilizing Jest with React Testing Library for unit testing.\n
+        • Created detailed documentation for each of the components built and provided feedback with other developers on design patterns.\n
         `
       }
     },
@@ -102,9 +103,10 @@ export const EXPERTISE_PROPS: ExpertiseProps = {
         company: 'Deloitte',
         job: 'Cloud Engineer Consultant',
         description: `
-        • Developed an internal new-hire onboarding portal using React.js, Node.js, PostgreSQL and AWS. This platform provides centralized access to onboarding information for new hires and progress tracking tools for managers, reducing the onboarding process time and errors.\n
-        • Collaborated with developers to automate regression testing for a financial institution's internal applications using Tricentis TOSCA resulting in a more efficient QA process.\n
-        • Migrated critical database objects from Microsoft SQL Server (MSSQL) to Amazon RDS for PostgreSQL using AWS Database Migration Service (DMS), ensuring data integrity and minimal downtime for business operations.\n
+        • Developed an onboarding portal using React, Nodejs and PostgreSQL for application development and Terraform with AWS for infrastructure deployment. This platform provides centralized access to onboarding information for new hires and progress tracking tools for managers, reducing the onboarding process time and errors.\n
+        • Managed and monitored AWS cloud infrastructure, utilizing different services such as EC2, ELB, Lambda, API Gateway, RDS, DynamoDB, S3, CloudWatch.\n
+        • Created, implemented and documented various tests on different cloud native applications using Tricentis TOSCA for regression testing and Jira for documentation.\n
+        • Migrated critical database objects from Microsoft SQL Server (MSSQL) to Amazon RDS for PostgreSQL using AWS Database Migration Service (DMS) and raw SQL, ensuring data integrity and minimal downtime for business operations.\n
         `
       }
     },
@@ -116,7 +118,7 @@ export const EXPERTISE_PROPS: ExpertiseProps = {
         description: `
         • Developed comprehensive inspection reports based on NDT assessments conducted on petroleum drilling equipment, ensuring detailed and accurate documentation of rig inspections.\n
         • Managed a systematic tool calibration process, auditing company inventory for calibration validity. Recalibrated expired equipment in-house where possible, and coordinated with certified calibration institutes to renew certificates for other tools, ensuring compliance with industry standards.\n
-        • Maintained organized records and managed the System for Managing Information (SGSS), ensuring adherence to relevant norms and keeping all documentation up-to-date to comply with industry regulations.\n
+        • Maintained and translate records and documents ensuring compliance with industry regulations under the System for Managing Information (SGSS) framework.\n
         `
       }
     },
@@ -177,10 +179,6 @@ export const SKILLS_PROPS: SkillsProps[] = [
   {
     range: 50,
     name: 'Nest.js',
-  },
-  {
-    range: 70,
-    name: 'MySQL',
   },
   {
     range: 80,
@@ -266,14 +264,14 @@ export const PORTFOLIO_PROJECTS = [
     image: shoesShop,
     projectUrl: 'https://caoh29.github.io/shoes-shop/'
   },
-  {
-    className: 'ui code',
-    name: 'Twitter Clone',
-    description: `Basic twitter clone web app using HTML,CSS and PHP.\n
-    https://github.com/caoh29/php-twitter`,
-    image: code,
-    projectUrl: 'https://github.com/caoh29/php-twitter'
-  },
+  // {
+  //   className: 'ui code',
+  //   name: 'Twitter Clone',
+  //   description: `Basic twitter clone web app using HTML,CSS and PHP.\n
+  //   https://github.com/caoh29/php-twitter`,
+  //   image: code,
+  //   projectUrl: 'https://github.com/caoh29/php-twitter'
+  // },
   {
     className: 'ui',
     name: 'Candy Shop',
