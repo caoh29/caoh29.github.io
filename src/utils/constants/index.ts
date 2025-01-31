@@ -222,7 +222,7 @@ export const PORTFOLIO_PROJECTS = [
     description: `E-commerce web app for pets using Nextjs.\n
     https://github.com/caoh29/petshop`,
     image: petShop,
-    projectUrl: 'https://github.com/caoh29/petshop'
+    projectUrl: 'https://store.caoh29.dev/'
   },
   {
     className: 'ui code',
