@@ -233,30 +233,6 @@ export const PORTFOLIO_PROJECTS = [
     projectUrl: 'https://caoh29.github.io/DiscoveryMenu/'
   },
   {
-    className: 'code',
-    name: 'Recipe Menu',
-    description: `Recipe finder desktop app using Java\n
-    https://github.com/caoh29/RecipeMenu`,
-    image: code,
-    projectUrl: 'https://github.com/caoh29/RecipeMenu'
-  },
-  {
-    className: 'ui',
-    name: 'Smoothie Shop',
-    description: `Smoothie shop web app form to make orders in Javascript.\n
-    https://github.com/caoh29/smoothie-shop`,
-    image: smoothieShop,
-    projectUrl: 'https://caoh29.github.io/smoothie-shop/'
-  },
-  {
-    className: 'ui',
-    name: 'Gallery',
-    description: `Image gallery web app in Javascript.\n
-    https://github.com/caoh29/gallery`,
-    image: gallery,
-    projectUrl: 'https://caoh29.github.io/gallery/'
-  },
-  {
     className: 'ui',
     name: 'Shoes Shop',
     description: `Shoes store web skeleton in plain HTML and CSS.\n
@@ -264,14 +240,6 @@ export const PORTFOLIO_PROJECTS = [
     image: shoesShop,
     projectUrl: 'https://caoh29.github.io/shoes-shop/'
   },
-  // {
-  //   className: 'ui code',
-  //   name: 'Twitter Clone',
-  //   description: `Basic twitter clone web app using HTML,CSS and PHP.\n
-  //   https://github.com/caoh29/php-twitter`,
-  //   image: code,
-  //   projectUrl: 'https://github.com/caoh29/php-twitter'
-  // },
   {
     className: 'ui',
     name: 'Candy Shop',
