@@ -249,22 +249,6 @@ export const PORTFOLIO_PROJECTS = [
     projectUrl: 'https://caoh29.github.io/candy-shop/'
   },
   {
-    className: 'ui',
-    name: 'Emporium Horses',
-    description: `Luxury horses web skeleton in plain HTML and CSS.\n
-    https://github.com/caoh29/emporium-horses`,
-    image: emporiumHorses,
-    projectUrl: 'https://caoh29.github.io/emporium-horses/'
-  },
-  {
-    className: 'ui',
-    name: 'Pokemon Favorites',
-    description: `Pokemon favorites UI web app using Nextjs.\n
-    https://github.com/caoh29/Pokemon`,
-    image: pokemon,
-    projectUrl: 'https://github.com/caoh29/Pokemon'
-  },
-  {
     className: 'code',
     name: 'Pokemon backend',
     description: `Pokemon REST API using Nestjs.\n
