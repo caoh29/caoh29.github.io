@@ -2,17 +2,12 @@ import { faUser, faGraduationCap, faPen, faGem, faSuitcase, faLocationArrow, faC
 import { faXTwitter, faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import avatarImage from '../../assets/images/avatar.jpg';
-// import ladder from '../../assets/images/ladder.png';
-// import loupe from '../../assets/images/loupe.png';
 import code from '../../assets/images/code.png';
 import petShop from '../../assets/images/petShop.png';
 import discoveryMenu from '../../assets/images/discoveryMenu.png';
-import smoothieShop from '../../assets/images/smoothieShop.png';
-import gallery from '../../assets/images/gallery.png';
+
 import shoesShop from '../../assets/images/shoesShop.png';
 import candyShop from '../../assets/images/candyShop.png';
-import emporiumHorses from '../../assets/images/emporiumHorses.png';
-import pokemon from '../../assets/images/pokemon.png';
 
 import { PhotoBoxProps, BoxProps, TimeLineProps, ExpertiseProps, FeedbackProps, SkillsProps } from '../../types';
 
@@ -367,11 +362,11 @@ export const NAVIGATION_DIRECTORY = [
     link: '#skills',
     content: 'Skills',
   },
-  // {
-  //   icon: faSuitcase,
-  //   link: '#portfolio',
-  //   content: 'Portfolio',
-  // },
+  {
+    icon: faSuitcase,
+    link: '#portfolio',
+    content: 'Portfolio',
+  },
   {
     icon: faLocationArrow,
     link: '#contact',
