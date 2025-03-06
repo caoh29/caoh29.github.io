@@ -1,3 +1,5 @@
-# Hello World!
+# Welcome to my curriculum vitae
 
-This project is my Curriculum Vitae which I hosted on GitHub pages, [deployment] available in (https://caoh29.github.io/).
+## Project info
+
+**URL**: https://caoh29.dev
