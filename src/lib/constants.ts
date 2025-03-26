@@ -113,6 +113,15 @@ export const projectsData = [
     demoUrl: "https://caoh29.dev/DiscoveryMenu",
     repoUrl: "https://caoh29.github.io/DiscoveryMenu/",
   },
+  {
+    id: 3,
+    title: "lc-auth",
+    description: "A lightweight, zero-dependency authentication library for Node.js using TypeScript, supporting local credentials, OAuth, and both stateful and stateless session strategies.",
+    image: "npm.jpg",
+    tags: ["TypeScript", "Node.js", "Authentication", "OAuth"],
+    demoUrl: "https://www.npmjs.com/package/lc-auth",
+    repoUrl: "https://github.com/caoh29/lc-auth",
+  }
 ];
 
 // Contact Section
