@@ -1,7 +1,14 @@
 import React from 'react';
 import Section from './common/Section';
 import RevealAnimation from './common/RevealAnimation';
-import { Code, Database, Layout, Server } from 'lucide-react';
+import {
+  Code,
+  Database,
+  Layout,
+  Server,
+  Cloud,
+  SquareFunction,
+} from 'lucide-react';
 import { skillCategories } from '@/lib/constants';
 
 const Skills: React.FC = () => {
@@ -16,6 +23,10 @@ const Skills: React.FC = () => {
         return <Database className='w-8 h-8 text-accent' />;
       case 'Code':
         return <Code className='w-8 h-8 text-accent' />;
+      case 'Cloud':
+        return <Cloud className='w-8 h-8 text-accent' />;
+      case 'Other':
+        return <SquareFunction className='w-8 h-8 text-accent' />;
       default:
         return <Code className='w-8 h-8 text-accent' />;
     }

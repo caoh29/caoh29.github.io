@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Section from './common/Section';
 import RevealAnimation from './common/RevealAnimation';
 import {
@@ -9,6 +9,7 @@ import {
   Github,
   Linkedin,
   Twitter,
+  LoaderCircle,
 } from 'lucide-react';
 import { contactData } from '@/lib/constants';
 
@@ -25,6 +26,52 @@ const Contact: React.FC = () => {
       default:
         return <Github className='w-5 h-5' />;
     }
+  };
+
+  const [loading, setLoading] = useState(false);
+  const [inputs, setInputs] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+
+  // Function to handle input changes
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = e.target;
+    setInputs((prevFormData) => ({ ...prevFormData, [name]: value }));
+  };
+
+  // Function to handle form submission
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const data = inputs;
+
+    const response = await fetch(`/api/contact`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      throw new Error('Error sending message to backend');
+    }
+
+    setLoading(false);
+    // e.currentTarget.reset();
+    setInputs({
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    });
+    alert(`Message sent successfully!`);
   };
 
   return (
@@ -112,7 +159,7 @@ const Contact: React.FC = () => {
           <div className='glass rounded-xl p-8'>
             <h3 className='text-xl font-semibold mb-6'>Send Me a Message</h3>
 
-            <form className='space-y-6'>
+            <form className='space-y-6' onSubmit={handleSubmit} method='POST'>
               <div className='grid md:grid-cols-2 gap-6'>
                 <div>
                   <label
@@ -124,9 +171,12 @@ const Contact: React.FC = () => {
                   <input
                     type='text'
                     id='name'
+                    name='name'
                     className='w-full bg-white/5 border border-border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-colors'
                     placeholder='John Doe'
                     required
+                    value={inputs.name}
+                    onChange={handleInputChange}
                   />
                 </div>
                 <div>
@@ -139,9 +189,12 @@ const Contact: React.FC = () => {
                   <input
                     type='email'
                     id='email'
+                    name='email'
                     className='w-full bg-white/5 border border-border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-colors'
                     placeholder='john@example.com'
                     required
+                    value={inputs.email}
+                    onChange={handleInputChange}
                   />
                 </div>
               </div>
@@ -156,9 +209,12 @@ const Contact: React.FC = () => {
                 <input
                   type='text'
                   id='subject'
+                  name='subject'
                   className='w-full bg-white/5 border border-border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-colors'
                   placeholder='Project Inquiry'
                   required
+                  value={inputs.subject}
+                  onChange={handleInputChange}
                 />
               </div>
 
@@ -171,19 +227,29 @@ const Contact: React.FC = () => {
                 </label>
                 <textarea
                   id='message'
+                  name='message'
                   rows={5}
                   className='w-full bg-white/5 border border-border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-colors resize-none'
                   placeholder="Hello, I'd like to talk about..."
                   required
+                  value={inputs.message}
+                  onChange={handleInputChange}
                 />
               </div>
 
               <button
                 type='submit'
-                className='flex items-center gap-2 bg-accent hover:bg-accent/90 text-white font-medium py-3 px-6 rounded-lg transition-colors w-full sm:w-auto justify-center'
+                className={`flex items-center gap-2 bg-accent hover:bg-accent/90 text-white font-medium py-3 px-6 rounded-lg transition-colors w-full sm:w-auto justify-center ${
+                  loading ? 'opacity-50 cursor-not-allowed' : ''
+                }`}
+                disabled={loading}
               >
-                <span>Send Message</span>
-                <Send className='w-4 h-4' />
+                <span>{loading ? 'Sending...' : 'Send Message'}</span>
+                {loading ? (
+                  <LoaderCircle className='w-4 h-4 animate-spin' />
+                ) : (
+                  <Send className='w-4 h-4' />
+                )}
               </button>
             </form>
           </div>
