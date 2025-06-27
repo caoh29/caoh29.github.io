@@ -165,7 +165,7 @@ export const projectsData = [
 // Contact Section
 export const contactData = {
   email: "cronox20@gmail.com",
-  phone: "+1 (437) 663-3948",
+  phone: "+1 (437) 663-9348",
   location: "Toronto, Canada",
   socialLinks: [
     { platform: "GitHub", url: "https://github.com/caoh29", icon: "Github" },
