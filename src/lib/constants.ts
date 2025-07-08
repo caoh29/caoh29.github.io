@@ -145,11 +145,12 @@ export const projectsData = [
   },
   {
     id: 2,
-    title: "Network Operations Center App",
-    description: "A service application designed for network operations center teams to monitor and manage network devices.",
-    image: "log-icon.png",
-    tags: ["TypeScript", "API Integration", "Node.js", "Docker", "PostgreSQL", "MongoDB"],
-    repoUrl: "https://github.com/caoh29/noc",
+    title: "ReportGen",
+    description: "A web application for generating pre-made and custom reports, built with Next.js and NestJS",
+    image: "document.png",
+    tags: ["TypeScript", "Next.js", "API Integration", "NestJS", "Docker"],
+    demoUrl: "https://reports.caoh29.dev/",
+    repoUrl: "https://github.com/caoh29/reports-maker-backend",
   },
   {
     id: 3,
@@ -159,7 +160,15 @@ export const projectsData = [
     tags: ["TypeScript", "Node.js", "Authentication", "OAuth"],
     demoUrl: "https://www.npmjs.com/package/lc-auth",
     repoUrl: "https://github.com/caoh29/lc-auth",
-  }
+  },
+  {
+    id: 4,
+    title: "Network Operations Center App",
+    description: "A service application designed for network operations center teams to monitor and manage network devices.",
+    image: "log-icon.png",
+    tags: ["TypeScript", "API Integration", "Node.js", "Docker", "PostgreSQL", "MongoDB"],
+    repoUrl: "https://github.com/caoh29/noc",
+  },
 ];
 
 // Contact Section
