@@ -161,7 +161,7 @@ export const projectsData = [
 export const contactData = {
   email: "cronox20@gmail.com",
   phone: "+1 (437) 663-9348",
-  location: "Toronto, Canada",
+  location: "Toronto, Canada / Bogota, Colombia",
   socialLinks: [
     { platform: "GitHub", url: "https://github.com/caoh29", icon: "Github" },
     { platform: "LinkedIn", url: "https://linkedin.com/in/camilo-ordonez-herrera", icon: "Linkedin" },
@@ -171,7 +171,7 @@ export const contactData = {
 
 // Footer
 export const footerData = {
-  copyright: "Camilo Ordonez Herrera",
+  copyright: "Camilo Ordoñez Herrera",
   links: [
     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
