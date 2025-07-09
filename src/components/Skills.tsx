@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Section from './common/Section';
 import RevealAnimation from './common/RevealAnimation';
 import {
@@ -8,28 +8,35 @@ import {
   Server,
   Cloud,
   SquareFunction,
+  ArrowUpRight,
 } from 'lucide-react';
 import { skillCategories } from '@/lib/constants';
 
+// Function to get the appropriate icon based on category name
+const getIconComponent = (iconName: string) => {
+  switch (iconName) {
+    case 'Layout':
+      return <Layout className='w-8 h-8 text-accent' />;
+    case 'Server':
+      return <Server className='w-8 h-8 text-accent' />;
+    case 'Database':
+      return <Database className='w-8 h-8 text-accent' />;
+    case 'Code':
+      return <Code className='w-8 h-8 text-accent' />;
+    case 'Cloud':
+      return <Cloud className='w-8 h-8 text-accent' />;
+    case 'Other':
+      return <SquareFunction className='w-8 h-8 text-accent' />;
+    default:
+      return <Code className='w-8 h-8 text-accent' />;
+  }
+};
+
 const Skills: React.FC = () => {
-  // Function to get the appropriate icon based on category name
-  const getIconComponent = (iconName: string) => {
-    switch (iconName) {
-      case 'Layout':
-        return <Layout className='w-8 h-8 text-accent' />;
-      case 'Server':
-        return <Server className='w-8 h-8 text-accent' />;
-      case 'Database':
-        return <Database className='w-8 h-8 text-accent' />;
-      case 'Code':
-        return <Code className='w-8 h-8 text-accent' />;
-      case 'Cloud':
-        return <Cloud className='w-8 h-8 text-accent' />;
-      case 'Other':
-        return <SquareFunction className='w-8 h-8 text-accent' />;
-      default:
-        return <Code className='w-8 h-8 text-accent' />;
-    }
+  const [visibleSkills, setVisibleSkills] = useState(4);
+
+  const loadMore = () => {
+    setVisibleSkills((prev) => Math.min(prev + 4, skillCategories.length));
   };
 
   return (
@@ -48,7 +55,7 @@ const Skills: React.FC = () => {
       </RevealAnimation>
 
       <div className='grid md:grid-cols-2 gap-8'>
-        {skillCategories.map((category, index) => (
+        {skillCategories.slice(0, visibleSkills).map((category, index) => (
           <RevealAnimation
             key={category.name}
             animation='fade-in'
@@ -81,6 +88,19 @@ const Skills: React.FC = () => {
           </RevealAnimation>
         ))}
       </div>
+      {visibleSkills < skillCategories.length && (
+        <RevealAnimation animation='fade-in'>
+          <div className='flex justify-center mt-12'>
+            <button
+              onClick={loadMore}
+              className='flex items-center gap-2 bg-secondary hover:bg-secondary/80 text-foreground font-medium py-3 px-8 rounded-lg transition-colors'
+            >
+              <span>Load More</span>
+              <ArrowUpRight size={18} />
+            </button>
+          </div>
+        </RevealAnimation>
+      )}
     </Section>
   );
 };

@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
 
         <RevealAnimation animation='fade-in' delay={200}>
           <h1 className='text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight mb-6'>
-            <span className='block'>Hello, I'm </span>
+            <span className='block mb-4'>Hello, I'm </span>
             <span className='text-accent'>{heroData.name}</span>
           </h1>
         </RevealAnimation>
