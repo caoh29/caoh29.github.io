@@ -12,28 +12,56 @@ import {
   LoaderCircle,
 } from 'lucide-react';
 import { contactData } from '@/lib/constants';
+import { useMutation } from '@tanstack/react-query';
+import { toast } from 'sonner';
+
+// Function to get the appropriate icon based on platform
+const getSocialIcon = (iconName: string) => {
+  switch (iconName) {
+    case 'Github':
+      return <Github className='w-5 h-5' />;
+    case 'Linkedin':
+      return <Linkedin className='w-5 h-5' />;
+    case 'Twitter':
+      return <Twitter className='w-5 h-5' />;
+    default:
+      return <Github className='w-5 h-5' />;
+  }
+};
 
 const Contact: React.FC = () => {
-  // Function to get the appropriate icon based on platform
-  const getSocialIcon = (iconName: string) => {
-    switch (iconName) {
-      case 'Github':
-        return <Github className='w-5 h-5' />;
-      case 'Linkedin':
-        return <Linkedin className='w-5 h-5' />;
-      case 'Twitter':
-        return <Twitter className='w-5 h-5' />;
-      default:
-        return <Github className='w-5 h-5' />;
-    }
-  };
-
-  const [loading, setLoading] = useState(false);
   const [inputs, setInputs] = useState({
     name: '',
     email: '',
     subject: '',
     message: '',
+  });
+
+  const { isPending, isError, error, mutate } = useMutation({
+    mutationKey: ['sendContactInfo'],
+    mutationFn: () =>
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(inputs),
+      }).then((res) => res.json()),
+    // new Promise((resolve) => {
+    //   setTimeout(() => {
+    //     resolve(1);
+    //   }, 3000);
+    // }),
+    onSuccess: () => {
+      setInputs({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+      });
+
+      toast('Message sent successfully!');
+    },
   });
 
   // Function to handle input changes
@@ -47,31 +75,7 @@ const Contact: React.FC = () => {
   // Function to handle form submission
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setLoading(true);
-
-    const data = inputs;
-
-    const response = await fetch(`/api/contact`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
-
-    if (!response.ok) {
-      throw new Error('Error sending message to backend');
-    }
-
-    setLoading(false);
-    // e.currentTarget.reset();
-    setInputs({
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-    });
-    alert(`Message sent successfully!`);
+    mutate();
   };
 
   return (
@@ -237,15 +241,21 @@ const Contact: React.FC = () => {
                 />
               </div>
 
+              {isError && (
+                <p className='text-red-600'>
+                  An error occurred: {error.message}
+                </p>
+              )}
+
               <button
                 type='submit'
                 className={`flex items-center gap-2 bg-accent hover:bg-accent/90 text-white font-medium py-3 px-6 rounded-lg transition-colors w-full sm:w-auto justify-center ${
-                  loading ? 'opacity-50 cursor-not-allowed' : ''
+                  isPending ? 'opacity-50 cursor-not-allowed' : ''
                 }`}
-                disabled={loading}
+                disabled={isPending}
               >
-                <span>{loading ? 'Sending...' : 'Send Message'}</span>
-                {loading ? (
+                <span>{isPending ? 'Sending...' : 'Send Message'}</span>
+                {isPending ? (
                   <LoaderCircle className='w-4 h-4 animate-spin' />
                 ) : (
                   <Send className='w-4 h-4' />
