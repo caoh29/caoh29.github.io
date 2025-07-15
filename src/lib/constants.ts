@@ -25,7 +25,7 @@ export const aboutData = {
   details: [
     { label: "Name", value: "Camilo Ordonez Herrera" },
     { label: "Email", value: "cronox20@gmail.com" },
-    { label: "Location", value: "Toronto, Canada / Bogota, Colombia" },
+    { label: "Location", value: "Toronto, Canada / Bogotá, Colombia" },
     { label: "Availability", value: "Open to Opportunities" }
   ]
 };
@@ -160,8 +160,8 @@ export const projectsData = [
 // Contact Section
 export const contactData = {
   email: "cronox20@gmail.com",
-  phone: "+1 (437) 663-9348",
-  location: "Toronto, Canada / Bogota, Colombia",
+  phone: "+1 (437) 663-9348 / +57 (316) 578-6800",
+  location: "Toronto, Canada / Bogotá, Colombia",
   socialLinks: [
     { platform: "GitHub", url: "https://github.com/caoh29", icon: "Github" },
     { platform: "LinkedIn", url: "https://linkedin.com/in/camilo-ordonez-herrera", icon: "Linkedin" },
